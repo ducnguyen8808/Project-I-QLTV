@@ -5,6 +5,8 @@
  */
 
 import javax.swing.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.awt.geom.Rectangle2D;
 import java.awt.geom.RoundRectangle2D;
 import java.sql.Connection;
@@ -24,6 +26,16 @@ public class Login extends javax.swing.JFrame {
         initComponents();
         setLocation(450, 100);
         this.setOpacity(1);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                int x = JOptionPane.showConfirmDialog(null, "Bạn có muốn thoát?", "Xác nhận",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                if (x == JOptionPane.YES_OPTION) {
+                    e.getWindow().dispose();
+                }
+            }
+        });
     }
 
     /** This method is called from within the constructor to

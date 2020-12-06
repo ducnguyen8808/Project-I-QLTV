@@ -64,8 +64,12 @@ public class ConnectDatabase {
     private String[][] dsSACH = new String[50][9];
     private String[][] dsDOCGIA = new String[50][5];
     private String[] listMaDG = new String[50];
+    private String[] listMaKho = new String[50];
     private String[][] dsMUON = new String[50][6];
     public String[] getListMaDG() {
+        for (int i = 0; i < listMaDG.length; i++) {
+            listMaDG[i] = null;
+        }
         try {
             Connection connection = CreatConnect();
             Statement statement = getStatement(connection);
@@ -80,6 +84,25 @@ public class ConnectDatabase {
             e.printStackTrace();
         }
         return listMaDG;
+    }
+    public String[] getListKho() {
+        for (int i = 0; i < listMaKho.length; i++) {
+            listMaKho[i] = null;
+        }
+        try {
+            Connection connection = CreatConnect();
+            Statement statement = getStatement(connection);
+            ResultSet resultSet = statement.executeQuery("select MAKHO from KHOSACH");
+            int index =0;
+            while (resultSet.next()) {
+                listMaKho[index] = resultSet.getString(1);
+                index++;
+            }
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return listMaKho;
     }
     public String[][]getDsSACH(String s) {
         for (int i = 0; i < dsSACH.length; i++) {

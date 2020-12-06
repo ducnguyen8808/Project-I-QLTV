@@ -8,6 +8,8 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -27,13 +29,22 @@ public class MainForm extends javax.swing.JFrame {
         setLocation(400, 120);
         setResizable(false);
         setTitle("Quản Lý Thư Viện");
-        //setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                int x = JOptionPane.showConfirmDialog(null, "Bạn có muốn thoát?", "Xác nhận",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                if (x == JOptionPane.YES_OPTION) {
+                    e.getWindow().dispose();
+                }
+            }
+        });
     }
     private ConnectDatabase connectDatabase = new ConnectDatabase();
 
 
     private String userName;
-
+    private JFileChooser fileDialog = new JFileChooser();
     public String getUserName() {
         return userName;
     }
@@ -1381,6 +1392,11 @@ public class MainForm extends javax.swing.JFrame {
 
         timMaKho.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         timMaKho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "KH1", "KH2", "KH3" }));
+        timMaKho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                timMaKhoActionPerformed(evt);
+            }
+        });
 
         org.jdesktop.layout.GroupLayout JPtimSachLayout = new org.jdesktop.layout.GroupLayout(JPtimSach);
         JPtimSach.setLayout(JPtimSachLayout);
@@ -1632,6 +1648,11 @@ public class MainForm extends javax.swing.JFrame {
 
         jButton5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton5.setText("Xuất file");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1720,6 +1741,11 @@ public class MainForm extends javax.swing.JFrame {
 
         jButton8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton8.setText("Xuất file");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1982,7 +2008,7 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         int rowIndex = bangSach.getSelectedRow();
         int colIndex = 1;
-        if (rowIndex != -1) {
+        if (rowIndex != -1 && bangSach.getValueAt(rowIndex, colIndex) != null) {
             Object[] option = {"Có", "Không"};
             int n = JOptionPane.showOptionDialog(this, "Bạn chắc chắn muốn xoá?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
             if (n == 0) {
@@ -2018,7 +2044,7 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         int rowIndex = dsDocGia.getSelectedRow();
         int colIndex = 3;
-        if (rowIndex != -1) {
+        if (rowIndex != -1 && dsDocGia.getValueAt(rowIndex, colIndex) != null) {
             Object[] option = {"Có", "Không"};
             int n = JOptionPane.showOptionDialog(this, "Bạn chắc chắn muốn xoá?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
             if (n == 0) {
@@ -2391,7 +2417,6 @@ public class MainForm extends javax.swing.JFrame {
             tmp = tmp + " and MONLOAI like N'" + timMonLoai.getText() + "'";
         if (!timNXB.getText().equals(""))
             tmp = tmp + " and MANXB like '" + timNXB.getText() + "'";
-        System.out.println(tmp);
         bangSach2.setModel(new javax.swing.table.DefaultTableModel(
                 connectDatabase.getDsSACH(tmp) ,
                 new String [] {
@@ -2453,6 +2478,20 @@ public class MainForm extends javax.swing.JFrame {
     private void timDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timDTActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_timDTActionPerformed
+
+    private void timMaKhoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timMaKhoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_timMaKhoActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        int returnVal = fileDialog.showSaveDialog(null);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        int returnVal = fileDialog.showSaveDialog(null);
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     /**
      * @param args the command line arguments
