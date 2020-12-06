@@ -2149,8 +2149,23 @@ public class MainForm extends javax.swing.JFrame {
         String sql = "insert into SACH(MASACH, TENSACH, TACGIA, MONLOAI, MANXB, GIATIEN, SOLUONG, NGONNGU, MAKHO) " +
                 "values ('" + MASACH + "', N'" + TENSACH + "', N'" + TACGIA + "', N'" + MONLOAI + "', '" + MANXB + "', '" +
                 GIATIEN + "', '" + SOLUONG + "', N'" + NGONNGU + "', '" + MAKHO + "')";
-        connectDatabase.insertData(sql);
-        JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
+        Object[] option = {"Có", "Không"};
+        int n = JOptionPane.showOptionDialog(this, "Bạn có muốn thêm sách?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
+        if (n == 0) {
+            connectDatabase.insertData(sql);
+            logThemSach.append("Thêm thành công:\n");
+            logThemSach.append("Tên sách: " + TENSACH + "\n");
+            logThemSach.append("Mã sách: " + MASACH + "\n");
+            logThemSach.append("Tác giả: " + TACGIA + "\n");
+            logThemSach.append("Môn loại: " + MONLOAI + "\n");
+            logThemSach.append("Mã NXB: " + MANXB + "\n");
+            logThemSach.append("Giá tiền: " + GIATIEN + "\n");
+            logThemSach.append("Số lượng: " + SOLUONG + "\n");
+            logThemSach.append("Ngôn ngữ: " + NGONNGU + "\n");
+            logThemSach.append("Mã kho: " + MAKHO + "\n");
+            logThemSach.append("------------------------------------------");
+            JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
+        }
     }//GEN-LAST:event_luuActionPerformed
     public String convertMMDDYY (String mmddyy) {
         String[] day = mmddyy.split("/");
@@ -2159,9 +2174,6 @@ public class MainForm extends javax.swing.JFrame {
         return ans;
     }
     private void buttomLuuActionPerformed(java.awt.event.ActionEvent evt) throws SQLException {//GEN-FIRST:event_buttomLuuActionPerformed
-        // TODO add your handling code here:
-        //them doc gia
-        //sadjfh
         String MATHE = inputSoThe.getText();
         String HOTEN = inputHoTen.getText();
         String NGAYSINH = inputNgaySinh.getText();
@@ -2178,9 +2190,23 @@ public class MainForm extends javax.swing.JFrame {
         String sql = "insert into DOCGIA(MATHE, HOTEN, NGAYSINH, GIOITINH, DIACHI, CMND, HANDUNG, SDT, CONGVIEC)" +
                 " values ('" + MATHE + "', N'" + HOTEN + "', '" + convertMMDDYY(NGAYSINH) + "', N'" + GIOITINH + "', N'" + DIACHI + "', '" +
                 CMND + "', '" + convertMMDDYY(HANDUNG) + "', '" + SDT + "', N'" + CONGVIEC + "')";
-        connectDatabase.insertData(sql);
-
-        JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
+        Object[] option = {"Có", "Không"};
+        int n = JOptionPane.showOptionDialog(this, "Bạn có muốn thêm độc giả?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
+        if (n == 0) {
+            connectDatabase.insertData(sql);
+            logThemDG.append("Thêm thành công:\n");
+            logThemDG.append("Họ tên: " + HOTEN + "\n");
+            logThemDG.append("Ngày sinh: " + convertMMDDYY(NGAYSINH) + "\n");
+            logThemDG.append("Giới tính: " + GIOITINH + "\n");
+            logThemDG.append("Mã thẻ: " + MATHE + "\n");
+            logThemDG.append("Địa chỉ: " + DIACHI + "\n");
+            logThemDG.append("CMND: " + CMND + "\n");
+            logThemDG.append("Hạn sử dụng: " + convertMMDDYY(HANDUNG) + "\n");
+            logThemDG.append("SĐT: " + SDT + "\n");
+            logThemDG.append("Công việc: " + CONGVIEC + "\n");
+            logThemDG.append("------------------------------------------");
+            JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
+        }
     }//GEN-LAST:event_buttomLuuActionPerformed
 
     private void luuTraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_luuTraActionPerformed
