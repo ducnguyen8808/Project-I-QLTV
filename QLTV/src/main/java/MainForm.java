@@ -1967,18 +1967,61 @@ public class MainForm extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Object[] option = {"Yes", "No"};
-        int n = JOptionPane.showOptionDialog(this, "Confirm select?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
-        if (n == 0)
+        int rowIndex = bangSach.getSelectedRow();
+        int colIndex = 1;
+        Object[] option = {"Có", "Không"};
+        int n = JOptionPane.showOptionDialog(this, "Bạn chắc chắn muốn xoá?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
+        if (n == 0) {
+            logXoa.append("Xoá thành công:\n");
+            logXoa.append("Mã kho: " + bangSach.getValueAt(rowIndex, 0) + "\n");
+            logXoa.append("Mã sách: " + bangSach.getValueAt(rowIndex, 1) + "\n");
+            logXoa.append("Tên sách: " + bangSach.getValueAt(rowIndex, 2) + "\n");
+            logXoa.append("Tách giả: " + bangSach.getValueAt(rowIndex, 3) + "\n");
+            logXoa.append("Nhà xuất bản: " + bangSach.getValueAt(rowIndex, 4) + "\n");
+            logXoa.append("Số lượng: " + bangSach.getValueAt(rowIndex, 5) + "\n");
+            logXoa.append("Ngôn ngữ: " + bangSach.getValueAt(rowIndex, 6) + "\n");
+            logXoa.append("Môn loại: " + bangSach.getValueAt(rowIndex, 7) + "\n");
+            logXoa.append("Giá tiền: " + bangSach.getValueAt(rowIndex, 8) + " (VNĐ) \n");
+            logXoa.append("-------------------------\n");
+            connectDatabase.deleteDataSach((String) bangSach.getValueAt(rowIndex, colIndex));
             JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
+        }  else {
+            logXoa.append("Huỷ thành công!\n");
+            logXoa.append("-------------------------\n");
+        }
+        bangSach.setModel(new javax.swing.table.DefaultTableModel(
+                connectDatabase.getDsSACH() ,
+                new String [] {
+                        "Mã Kho", "Mã Sách", "Tên Sách", "Tác giả", "NXB", "Số lượng", "Ngôn ngữ", "Môn loại", "Giá tiền"
+                }
+        ));
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void buttomXoaDGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttomXoaDGActionPerformed
         // TODO add your handling code here:
-        Object[] option = {"Yes", "No"};
-        int n = JOptionPane.showOptionDialog(this, "Confirm select?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
-        if (n == 0)
+        int rowIndex = dsDocGia.getSelectedRow();
+        int colIndex = 3;
+        Object[] option = {"Có", "Không"};
+        int n = JOptionPane.showOptionDialog(this, "Bạn chắc chắn muốn xoá?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
+        if (n == 0) {
+            jTextArea1.append("Tên độc giả: " + dsDocGia.getValueAt(rowIndex, 0) + "\n");
+            jTextArea1.append("Giới tính: " + dsDocGia.getValueAt(rowIndex, 1) + "\n");
+            jTextArea1.append("CMND: " + dsDocGia.getValueAt(rowIndex, 2) + "\n");
+            jTextArea1.append("Số thẻ: " + dsDocGia.getValueAt(rowIndex, 3) + "\n");
+            jTextArea1.append("Hạn dùng: " + dsDocGia.getValueAt(rowIndex, 4) + "\n");
+            jTextArea1.append("----------------------------------------------------\n");
+            connectDatabase.deleteDataDocGia((String) dsDocGia.getValueAt(rowIndex, colIndex));
             JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
+        } else {
+            jTextArea1.append("Huỷ thành công!\n");
+            jTextArea1.append("----------------------------------------------------\n");
+        }
+        dsDocGia.setModel(new javax.swing.table.DefaultTableModel(
+                connectDatabase.getDocGia(),
+                new String [] {
+                        "Tên độc giả", "Giới tính", "Số CMND", "Số thẻ", "Hạn dùng"
+                }
+        ));
     }//GEN-LAST:event_buttomXoaDGActionPerformed
 
     private void thoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thoatActionPerformed
@@ -2159,12 +2202,15 @@ public class MainForm extends javax.swing.JFrame {
             logThemSach.append("Tác giả: " + TACGIA + "\n");
             logThemSach.append("Môn loại: " + MONLOAI + "\n");
             logThemSach.append("Mã NXB: " + MANXB + "\n");
-            logThemSach.append("Giá tiền: " + GIATIEN + "\n");
+            logThemSach.append("Giá tiền: " + GIATIEN + " (VNĐ) \n");
             logThemSach.append("Số lượng: " + SOLUONG + "\n");
             logThemSach.append("Ngôn ngữ: " + NGONNGU + "\n");
             logThemSach.append("Mã kho: " + MAKHO + "\n");
             logThemSach.append("------------------------------------------");
             JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
+        } else  {
+            logThemSach.append("Huỷ thành công!\n");
+            logThemSach.append("------------------------------------------");
         }
     }//GEN-LAST:event_luuActionPerformed
     public String convertMMDDYY (String mmddyy) {
@@ -2206,6 +2252,9 @@ public class MainForm extends javax.swing.JFrame {
             logThemDG.append("Công việc: " + CONGVIEC + "\n");
             logThemDG.append("------------------------------------------");
             JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
+        } else {
+            logThemDG.append("Huỷ thành công!\n");
+            logThemDG.append("------------------------------------------");
         }
     }//GEN-LAST:event_buttomLuuActionPerformed
 

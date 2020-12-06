@@ -82,6 +82,10 @@ public class ConnectDatabase {
         return listMaDG;
     }
     public String[][]getDsSACH() {
+        for (int i = 0; i < dsSACH.length; i++) {
+            for (int j = 0; j < dsSACH[0].length; j++)
+                dsSACH[i][j] = null;
+        }
         try {
             Connection connection = CreatConnect();
             Statement statement = getStatement(connection);
@@ -123,6 +127,10 @@ public class ConnectDatabase {
         }
     }
     public String[][] getDocGiaMuon() {
+        for (int i = 0; i < dsDOCGIAMUON.length; i++) {
+            for (int j = 0; j < dsDOCGIAMUON[0].length; j++)
+                dsDOCGIAMUON[i][j] = null;
+        }
         try {
             updateListSum(listSum);
             Connection connection = CreatConnect();
@@ -154,6 +162,10 @@ public class ConnectDatabase {
         return dsDOCGIAMUON;
     }
     public String[][] getDocGia() {
+        for (int i = 0; i < dsDOCGIA.length; i++) {
+            for (int j = 0; j < dsDOCGIA[0].length; j++)
+                dsDOCGIA[i][j] = null;
+        }
         try {
             Connection connection = CreatConnect();
             Statement statement = getStatement(connection);
@@ -244,5 +256,25 @@ public class ConnectDatabase {
             e.printStackTrace();
         }
         return dsMUON;
+    }
+    public void deleteDataSach(String str) {
+        try {
+            Connection connection = CreatConnect();
+            Statement statement = connection.createStatement();
+            statement.executeUpdate("delete from SACH where MASACH = '" + str + "'");
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void deleteDataDocGia(String str) {
+        try {
+            Connection connection = CreatConnect();
+            Statement statement = connection.createStatement();
+            statement.executeUpdate("delete from DOCGIA where MATHE = '" + str + "'");
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
