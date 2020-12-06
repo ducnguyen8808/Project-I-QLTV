@@ -81,7 +81,7 @@ public class ConnectDatabase {
         }
         return listMaDG;
     }
-    public String[][]getDsSACH() {
+    public String[][]getDsSACH(String s) {
         for (int i = 0; i < dsSACH.length; i++) {
             for (int j = 0; j < dsSACH[0].length; j++)
                 dsSACH[i][j] = null;
@@ -89,7 +89,7 @@ public class ConnectDatabase {
         try {
             Connection connection = CreatConnect();
             Statement statement = getStatement(connection);
-            ResultSet resultSet = statement.executeQuery("select MAKHO, MASACH, TENSACH, TACGIA,TENNXB, SOLUONG, NGONNGU, MONLOAI, GIATIEN from SACH, NXB where SACH.MANXB = NXB.MANXB");
+            ResultSet resultSet = statement.executeQuery("select MAKHO, MASACH, TENSACH, TACGIA,TENNXB, SOLUONG, NGONNGU, MONLOAI, GIATIEN from SACH, NXB where SACH.MANXB = NXB.MANXB" + s);
             int index =0;
             while (resultSet.next()) {
                 dsSACH[index][0] = resultSet.getString(1);
@@ -277,4 +277,31 @@ public class ConnectDatabase {
             e.printStackTrace();
         }
     }
+    private String[][] dsTKDocGia = new String[50][6];
+    public String[][] getTKDocGia(String str) {
+        for (int i = 0; i < dsTKDocGia.length; i++) {
+            for (int j = 0; j < dsTKDocGia[0].length; j++) {
+                dsTKDocGia[i][j] = null;
+            }
+        }
+        int index = 0;
+        try {
+            Connection connection = CreatConnect();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery("select HOTEN, CMND, GIOITINH, SDT, DIACHI, HANDUNG from DOCGIA " + str);
+            while (resultSet.next()) {
+                dsTKDocGia[index][0] = resultSet.getString(1);
+                dsTKDocGia[index][1] = resultSet.getString(2);
+                dsTKDocGia[index][2] = resultSet.getString(3);
+                dsTKDocGia[index][3] = resultSet.getString(4);
+                dsTKDocGia[index][4] = resultSet.getString(5);
+                dsTKDocGia[index][5] = resultSet.getString(6);
+                index++;
+            }
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return dsTKDocGia;
+    } 
 }

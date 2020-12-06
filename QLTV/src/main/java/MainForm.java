@@ -7,10 +7,13 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Vector;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -183,15 +186,15 @@ public class MainForm extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         timNXB = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
-        timMaKho = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
         timKiemSach = new javax.swing.JButton();
         huyTimSach = new javax.swing.JButton();
         jScrollPane9 = new javax.swing.JScrollPane();
         bangSach2 = new javax.swing.JTable();
+        timMaKho = new javax.swing.JComboBox<>();
         JPthongTin = new javax.swing.JPanel();
         jScrollPane10 = new javax.swing.JScrollPane();
-        jTable4 = new javax.swing.JTable();
+        dsTKDocGia = new javax.swing.JTable();
         jLabel23 = new javax.swing.JLabel();
         timHoTen = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
@@ -203,7 +206,7 @@ public class MainForm extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         timCongViec = new javax.swing.JTextField();
         jLabel28 = new javax.swing.JLabel();
-        tímDT = new javax.swing.JTextField();
+        timDT = new javax.swing.JTextField();
         timkiem = new javax.swing.JButton();
         jSeparator5 = new javax.swing.JSeparator();
         huyTimKiem = new javax.swing.JButton();
@@ -1015,7 +1018,6 @@ public class MainForm extends javax.swing.JFrame {
         jTextField2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -1025,7 +1027,7 @@ public class MainForm extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel10.setText("Độc giả");
 
-        jTextField3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jTextField3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         jLabel37.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel37.setText("Ngày mượn");
@@ -1346,8 +1348,6 @@ public class MainForm extends javax.swing.JFrame {
         jLabel22.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel22.setText("Mã kho:");
 
-        timMaKho.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-
         timKiemSach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         timKiemSach.setText("Tìm kiếm");
         timKiemSach.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1378,6 +1378,9 @@ public class MainForm extends javax.swing.JFrame {
             }
         ));
         jScrollPane9.setViewportView(bangSach2);
+
+        timMaKho.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        timMaKho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "KH1", "KH2", "KH3" }));
 
         org.jdesktop.layout.GroupLayout JPtimSachLayout = new org.jdesktop.layout.GroupLayout(JPtimSach);
         JPtimSach.setLayout(JPtimSachLayout);
@@ -1456,7 +1459,7 @@ public class MainForm extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jSeparator4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
+                .add(jScrollPane9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1465,7 +1468,7 @@ public class MainForm extends javax.swing.JFrame {
         JPthongTin.setBackground(new java.awt.Color(214, 217, 223));
         JPthongTin.setPreferredSize(new java.awt.Dimension(800, 488));
 
-        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+        dsTKDocGia.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -1473,7 +1476,7 @@ public class MainForm extends javax.swing.JFrame {
                 "Họ tên", "Số CMND", "Giới tính", "Số điện thoại", "Địa chỉ", "Hạn dùng thẻ"
             }
         ));
-        jScrollPane10.setViewportView(jTable4);
+        jScrollPane10.setViewportView(dsTKDocGia);
 
         jLabel23.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel23.setText("Họ tên:");
@@ -1509,10 +1512,20 @@ public class MainForm extends javax.swing.JFrame {
         jLabel28.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel28.setText("Số điện thoại:");
 
-        tímDT.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        timDT.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        timDT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                timDTActionPerformed(evt);
+            }
+        });
 
         timkiem.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         timkiem.setText("Tìm kiếm");
+        timkiem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                timkiemActionPerformed(evt);
+            }
+        });
 
         huyTimKiem.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         huyTimKiem.setText("Thoát");
@@ -1555,7 +1568,7 @@ public class MainForm extends javax.swing.JFrame {
                                 .add(18, 18, 18)
                                 .add(jLabel28)
                                 .add(18, 18, 18)
-                                .add(tímDT)))
+                                .add(timDT)))
                         .add(46, 46, 46)
                         .add(JPthongTinLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                             .add(timkiem, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1589,7 +1602,7 @@ public class MainForm extends javax.swing.JFrame {
                     .add(jLabel27)
                     .add(timCongViec, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jLabel28)
-                    .add(tímDT, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(timDT, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(huyTimKiem))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jSeparator5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -1969,28 +1982,32 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         int rowIndex = bangSach.getSelectedRow();
         int colIndex = 1;
-        Object[] option = {"Có", "Không"};
-        int n = JOptionPane.showOptionDialog(this, "Bạn chắc chắn muốn xoá?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
-        if (n == 0) {
-            logXoa.append("Xoá thành công:\n");
-            logXoa.append("Mã kho: " + bangSach.getValueAt(rowIndex, 0) + "\n");
-            logXoa.append("Mã sách: " + bangSach.getValueAt(rowIndex, 1) + "\n");
-            logXoa.append("Tên sách: " + bangSach.getValueAt(rowIndex, 2) + "\n");
-            logXoa.append("Tách giả: " + bangSach.getValueAt(rowIndex, 3) + "\n");
-            logXoa.append("Nhà xuất bản: " + bangSach.getValueAt(rowIndex, 4) + "\n");
-            logXoa.append("Số lượng: " + bangSach.getValueAt(rowIndex, 5) + "\n");
-            logXoa.append("Ngôn ngữ: " + bangSach.getValueAt(rowIndex, 6) + "\n");
-            logXoa.append("Môn loại: " + bangSach.getValueAt(rowIndex, 7) + "\n");
-            logXoa.append("Giá tiền: " + bangSach.getValueAt(rowIndex, 8) + " (VNĐ) \n");
-            logXoa.append("-------------------------\n");
-            connectDatabase.deleteDataSach((String) bangSach.getValueAt(rowIndex, colIndex));
-            JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
-        }  else {
-            logXoa.append("Huỷ thành công!\n");
-            logXoa.append("-------------------------\n");
+        if (rowIndex != -1) {
+            Object[] option = {"Có", "Không"};
+            int n = JOptionPane.showOptionDialog(this, "Bạn chắc chắn muốn xoá?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
+            if (n == 0) {
+                logXoa.append("Xoá thành công:\n");
+                logXoa.append("Mã kho: " + bangSach.getValueAt(rowIndex, 0) + "\n");
+                logXoa.append("Mã sách: " + bangSach.getValueAt(rowIndex, 1) + "\n");
+                logXoa.append("Tên sách: " + bangSach.getValueAt(rowIndex, 2) + "\n");
+                logXoa.append("Tách giả: " + bangSach.getValueAt(rowIndex, 3) + "\n");
+                logXoa.append("Nhà xuất bản: " + bangSach.getValueAt(rowIndex, 4) + "\n");
+                logXoa.append("Số lượng: " + bangSach.getValueAt(rowIndex, 5) + "\n");
+                logXoa.append("Ngôn ngữ: " + bangSach.getValueAt(rowIndex, 6) + "\n");
+                logXoa.append("Môn loại: " + bangSach.getValueAt(rowIndex, 7) + "\n");
+                logXoa.append("Giá tiền: " + bangSach.getValueAt(rowIndex, 8) + " (VNĐ) \n");
+                logXoa.append("-------------------------\n");
+                connectDatabase.deleteDataSach((String) bangSach.getValueAt(rowIndex, colIndex));
+                JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
+            }  else {
+                logXoa.append("Huỷ thành công!\n");
+                logXoa.append("-------------------------\n");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Vui lòng chọn một mục!");
         }
         bangSach.setModel(new javax.swing.table.DefaultTableModel(
-                connectDatabase.getDsSACH() ,
+                connectDatabase.getDsSACH("") ,
                 new String [] {
                         "Mã Kho", "Mã Sách", "Tên Sách", "Tác giả", "NXB", "Số lượng", "Ngôn ngữ", "Môn loại", "Giá tiền"
                 }
@@ -2001,20 +2018,25 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         int rowIndex = dsDocGia.getSelectedRow();
         int colIndex = 3;
-        Object[] option = {"Có", "Không"};
-        int n = JOptionPane.showOptionDialog(this, "Bạn chắc chắn muốn xoá?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
-        if (n == 0) {
-            jTextArea1.append("Tên độc giả: " + dsDocGia.getValueAt(rowIndex, 0) + "\n");
-            jTextArea1.append("Giới tính: " + dsDocGia.getValueAt(rowIndex, 1) + "\n");
-            jTextArea1.append("CMND: " + dsDocGia.getValueAt(rowIndex, 2) + "\n");
-            jTextArea1.append("Số thẻ: " + dsDocGia.getValueAt(rowIndex, 3) + "\n");
-            jTextArea1.append("Hạn dùng: " + dsDocGia.getValueAt(rowIndex, 4) + "\n");
-            jTextArea1.append("----------------------------------------------------\n");
-            connectDatabase.deleteDataDocGia((String) dsDocGia.getValueAt(rowIndex, colIndex));
-            JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
-        } else {
-            jTextArea1.append("Huỷ thành công!\n");
-            jTextArea1.append("----------------------------------------------------\n");
+        if (rowIndex != -1) {
+            Object[] option = {"Có", "Không"};
+            int n = JOptionPane.showOptionDialog(this, "Bạn chắc chắn muốn xoá?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
+            if (n == 0) {
+                jTextArea1.append("Xoá thành công:\n");
+                jTextArea1.append("Tên độc giả: " + dsDocGia.getValueAt(rowIndex, 0) + "\n");
+                jTextArea1.append("Giới tính: " + dsDocGia.getValueAt(rowIndex, 1) + "\n");
+                jTextArea1.append("CMND: " + dsDocGia.getValueAt(rowIndex, 2) + "\n");
+                jTextArea1.append("Số thẻ: " + dsDocGia.getValueAt(rowIndex, 3) + "\n");
+                jTextArea1.append("Hạn dùng: " + dsDocGia.getValueAt(rowIndex, 4) + "\n");
+                jTextArea1.append("----------------------------------------------------\n");
+                connectDatabase.deleteDataDocGia((String) dsDocGia.getValueAt(rowIndex, colIndex));
+                JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
+            } else {
+                jTextArea1.append("Huỷ thành công!\n");
+                jTextArea1.append("----------------------------------------------------\n");
+            }
+        }  else {
+            JOptionPane.showMessageDialog(this, "Vui lòng chọn một mục!");
         }
         dsDocGia.setModel(new javax.swing.table.DefaultTableModel(
                 connectDatabase.getDocGia(),
@@ -2079,8 +2101,9 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         disableAllPanel();
         JPxoaSach.setVisible(true);
+        logXoa.setEditable(true);
         bangSach.setModel(new javax.swing.table.DefaultTableModel(
-                connectDatabase.getDsSACH() ,
+                connectDatabase.getDsSACH("") ,
                 new String [] {
                         "Mã Kho", "Mã Sách", "Tên Sách", "Tác giả", "NXB", "Số lượng", "Ngôn ngữ", "Môn loại", "Giá tiền"
                 }
@@ -2110,7 +2133,7 @@ public class MainForm extends javax.swing.JFrame {
         disableAllPanel();
         JPdsSach.setVisible(true);
         bangSach1.setModel(new javax.swing.table.DefaultTableModel(
-                connectDatabase.getDsSACH() ,
+                connectDatabase.getDsSACH("") ,
                 new String [] {
                         "Mã Kho", "Mã Sách", "Tên Sách", "Tác giả", "NXB", "Số lượng", "Ngôn ngữ", "Môn loại", "Giá tiền"
                 }
@@ -2354,8 +2377,23 @@ public class MainForm extends javax.swing.JFrame {
 
     private void timKiemSachMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_timKiemSachMouseClicked
         // TODO add your handling code here:
+        String tmp = "";
+        tmp = tmp + " and MAKHO like '%" + timMaKho.getSelectedItem() + "%'";
+        if (!timTenSach.getText().equals(""))
+            tmp = tmp + " and TENSACH like N'" + timTenSach.getText() + "'";
+        if (!timMaSach.getText().equals(""))
+            tmp = tmp + " and MASACH like '" + timMaSach.getText() + "'";
+        if (!timNgonNgu.getText().equals(""))
+            tmp = tmp + " and NGONNGU like N'" + timNgonNgu.getText() + "'";
+        if (!timTacGia.getText().equals(""))
+            tmp = tmp + " and TACGIA like N'" + timTacGia.getText() + "'";
+        if (!timMonLoai.getText().equals(""))
+            tmp = tmp + " and MONLOAI like N'" + timMonLoai.getText() + "'";
+        if (!timNXB.getText().equals(""))
+            tmp = tmp + " and MANXB like '" + timNXB.getText() + "'";
+        System.out.println(tmp);
         bangSach2.setModel(new javax.swing.table.DefaultTableModel(
-                connectDatabase.getDsSACH(),
+                connectDatabase.getDsSACH(tmp) ,
                 new String [] {
                         "Mã Kho", "Mã Sách", "Tên Sách", "Tác giả", "NXB", "Số lượng", "Ngôn ngữ", "Môn loại", "Giá tiền"
                 }
@@ -2364,6 +2402,7 @@ public class MainForm extends javax.swing.JFrame {
 
     private void timKiemSachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timKiemSachActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_timKiemSachActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -2376,6 +2415,44 @@ public class MainForm extends javax.swing.JFrame {
                 }
         ));
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void timkiemActionPerformed(ActionEvent evt) {//GEN-FIRST:event_timkiemActionPerformed
+        // TODO add your handling code here:
+        String temp = "";
+        switch (timGioiTinh.getSelectedIndex()) {
+            case 0:
+                temp = temp + " GIOITINH like N'%Nam%'";
+                break;
+            case 1:
+                temp = temp + " GIOITINH like N'%Nữ%'";
+                break;
+            case 2:
+                temp = temp + " GIOITINH like N'%Khác%'";
+                break;
+        }
+        if (!timHoTen.getText().equals(""))
+            temp = temp + " and HOTEN like N'%" + timHoTen.getText() + "%'";
+        if (!timCMND.getText().equals(""))
+            temp = temp + " and CMND like '%" + timCMND.getText() +  "%'";
+        if (!timDiaChi.getText().equals(""))
+            temp = temp + " and DIACHI like N'%" + timDiaChi.getText() +  "%'";
+        if (!timCongViec.getText().equals(""))
+            temp = temp + " and CONGVIEC like N'%" + timCongViec.getText() +  "%'";
+        if (!timDT.getText().equals(""))
+            temp = temp + " and SDT like '%" + timDT.getText() +  "%'";
+        if (!temp.equals(""))
+            temp = "where " + temp;
+        dsTKDocGia.setModel(new javax.swing.table.DefaultTableModel(
+                connectDatabase.getTKDocGia(temp),
+                new String [] {
+                        "Họ tên", "Số CMND", "Giới tính", "Số điện thoại", "Địa chỉ", "Hạn dùng thẻ"
+                }
+        ));
+    }//GEN-LAST:event_timkiemActionPerformed
+
+    private void timDTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timDTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_timDTActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2451,6 +2528,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTable dsDocGia;
     private javax.swing.JTable dsDocGia1;
     private javax.swing.JMenuItem dsSach;
+    private javax.swing.JTable dsTKDocGia;
     private javax.swing.JLabel gia;
     private javax.swing.JLabel gioiTinh;
     private javax.swing.JLabel hanDung;
@@ -2554,7 +2632,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
@@ -2593,11 +2670,12 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTextField timCMND;
     private javax.swing.JTextField timCongViec;
     private javax.swing.JMenuItem timDG;
+    private javax.swing.JTextField timDT;
     private javax.swing.JTextField timDiaChi;
     private javax.swing.JComboBox<String> timGioiTinh;
     private javax.swing.JTextField timHoTen;
     private javax.swing.JButton timKiemSach;
-    private javax.swing.JTextField timMaKho;
+    private javax.swing.JComboBox<String> timMaKho;
     private javax.swing.JTextField timMaSach;
     private javax.swing.JTextField timMonLoai;
     private javax.swing.JTextField timNXB;
@@ -2610,7 +2688,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JMenuItem tkSach;
     private javax.swing.JTextField tongSachMuon;
     private javax.swing.JMenuItem traSach;
-    private javax.swing.JTextField tímDT;
     private javax.swing.JMenuItem xoaDocGia;
     private javax.swing.JMenuItem xoaSach;
     private javax.swing.JButton xoaSachM;
