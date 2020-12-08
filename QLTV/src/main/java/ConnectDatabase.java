@@ -1,4 +1,6 @@
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Set;
 
 public class ConnectDatabase {
     public Connection CreatConnect() {
@@ -137,7 +139,7 @@ public class ConnectDatabase {
         try {
             Connection connection = CreatConnect();
             Statement statement = getStatement(connection);
-            ResultSet resultSet = statement.executeQuery("select MATHE, sum(SOLUONG) as SOLUONG from MUONTRA group by MATHE");
+            ResultSet resultSet = statement.executeQuery("select MATHE, sum(SOLUONG) as SOLUONG from MUON group by MATHE");
             int index = 0;
             while (resultSet.next()) {
                 listSum[index][0] = resultSet.getString(1);
@@ -256,15 +258,17 @@ public class ConnectDatabase {
     }
     public String[][] getDsMUON(String str) {
         int index = 0;
-        for (int i = 0; i < 50; i++) {
-            dsMUON[i] = new String[]{null, null, null, null, null, null};
+        for (int i = 0; i < dsMUON.length; i++) {
+            for (int j = 0; j < dsMUON[0].length; j++) {
+                dsMUON[i][j] = null;
+            }
         }
         try {
             Connection connection = CreatConnect();
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("select MUONTRA.MASACH, TENSACH, TACGIA, MUONTRA.SOLUONG, NGAYMUON, DKTRA\n" +
-                    "from MUONTRA, SACH\n" +
-                    "where MUONTRA.MASACH = SACH.MASACH and MUONTRA.MATHE = " + str);
+            ResultSet resultSet = statement.executeQuery("select MUON.MASACH, TENSACH, TACGIA, MUON.SOLUONG, NGAYMUON, DKTRA\n" +
+                    "from MUON, SACH\n" +
+                    "where MUON.MASACH = SACH.MASACH and MUON.MATHE = " + str);
             while (resultSet.next()) {
                 dsMUON[index][0] = resultSet.getString(1);
                 dsMUON[index][1] = resultSet.getString(2);
@@ -326,5 +330,61 @@ public class ConnectDatabase {
             e.printStackTrace();
         }
         return dsTKDocGia;
-    } 
+    }
+    public String getSingleData(String str) {
+        String temp = new String("");
+        try {
+            Connection connection = CreatConnect();
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(str);
+            while (resultSet.next()) {
+                temp += resultSet.getString(1) + ",";
+            }
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return temp;
+    }
+    private String[] listDonMuon = new String[100];
+    public String[] getListDonMuon() {
+        for (int i = 0; i < listDonMuon.length; i++) {
+            listDonMuon[i] = null;
+        }
+        try {
+            Connection connection = CreatConnect();
+            Statement statement = getStatement(connection);
+            ResultSet resultSet = statement.executeQuery("select MAMUON from DKMUON");
+            int index =0;
+            while (resultSet.next()) {
+                listDonMuon[index] = resultSet.getString(1);
+                index++;
+            }
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return listDonMuon;
+    }
+    private String[] listSachMuon = new String[50];
+    public String[] getListSachMuon(String str) {
+        for (int i = 0; i < listSachMuon.length; i++) {
+            listSachMuon[i] = null;
+        }
+        try {
+            Connection connection = CreatConnect();
+            Statement statement = getStatement(connection);
+            ResultSet resultSet = statement.executeQuery("select MASACH from MUON where MAMUON = '" + str + "'");
+            int index =0;
+            while (resultSet.next()) {
+                listSachMuon[index] = resultSet.getString(1);
+                index++;
+            }
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return listSachMuon;
+    }
+
 }
