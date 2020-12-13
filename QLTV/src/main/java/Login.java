@@ -27,6 +27,7 @@ public class Login extends javax.swing.JFrame {
         setLocation(450, 100);
         this.setOpacity(1);
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        setResizable(false);
         this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -191,15 +192,18 @@ public class Login extends javax.swing.JFrame {
         String getUser = connectDatabase.getUsername();
         String getPass = connectDatabase.getPass(username);
         setUserID(username);
-        if (getUser.contains(username) && password.equals(getPass) && (!username.equals("") || !password.equals(""))) {
-            this.dispose();
-            MainForm mainForm = new MainForm();
-            mainForm.setVisible(true);
-            mainForm.setUserName(username);
+        if (username.equals("") || password.equals("")) {
+            JOptionPane.showMessageDialog(this, "Vui lòng nhập đầy đủ thông tin!");
         } else {
-            JOptionPane.showMessageDialog(this, "Sai thông tin tài khoản!");
+            if (getUser.contains(username) && password.equals(getPass) && (!username.equals("") || !password.equals(""))) {
+                this.dispose();
+                MainForm mainForm = new MainForm();
+                mainForm.setVisible(true);
+                mainForm.setUserName(username);
+            } else {
+                JOptionPane.showMessageDialog(this, "Sai thông tin tài khoản!");
+            }
         }
-
 
     }//GEN-LAST:event_loginActionPerformed
 

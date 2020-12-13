@@ -64,6 +64,7 @@ public class MainForm extends javax.swing.JFrame {
 
         cardLayout = new javax.swing.JLayeredPane();
         Home = new javax.swing.JPanel();
+        jLabel44 = new javax.swing.JLabel();
         JPthemSach = new javax.swing.JPanel();
         tensach = new javax.swing.JLabel();
         inputTenSach = new javax.swing.JTextField();
@@ -181,10 +182,16 @@ public class MainForm extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jComboBox7 = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        jTextSoLuongTra = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        jTextNgayTra = new javax.swing.JTextField();
         jButton10 = new javax.swing.JButton();
+        jLabel41 = new javax.swing.JLabel();
+        jTextConLai = new javax.swing.JTextField();
+        jLabel42 = new javax.swing.JLabel();
+        jTextTratiencoc = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
         JPtimSach = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         timTenSach = new javax.swing.JTextField();
@@ -227,12 +234,14 @@ public class MainForm extends javax.swing.JFrame {
         jLabel31 = new javax.swing.JLabel();
         jComboBox3 = new javax.swing.JComboBox<>();
         jLabel32 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        selectThang = new javax.swing.JComboBox<>();
+        buttomThongke = new javax.swing.JButton();
+        buttomXuatFile = new javax.swing.JButton();
         jScrollPane11 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton6 = new javax.swing.JButton();
+        jLabel45 = new javax.swing.JLabel();
+        selectQuy = new javax.swing.JComboBox<>();
         JPtkDocGia = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jComboBox5 = new javax.swing.JComboBox<>();
@@ -280,6 +289,9 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
         Home.setLayout(null);
+        Home.add(jLabel44);
+        jLabel44.setBounds(0, 0, 800, 510);
+
         cardLayout.add(Home, "card10");
 
         JPthemSach.setBackground(new java.awt.Color(214, 217, 223));
@@ -1229,7 +1241,6 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        //jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -1250,7 +1261,7 @@ public class MainForm extends javax.swing.JFrame {
                 {null, null, null, null, null}
             },
             new String [] {
-                "Mã Sách", "Tên sách", "Số lượng mượn", "Số lượng trả", "Tổng số"
+                "Mã Sách", "Tên sách", "Số lượng trả", "Ngày trả", "Quá hạn"
             }
         ));
         jScrollPane13.setViewportView(jTable3);
@@ -1258,19 +1269,45 @@ public class MainForm extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel14.setText("Mã sách:");
 
+        jComboBox7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox7ActionPerformed(evt);
+            }
+        });
 
         jLabel15.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel15.setText("Số lượng trả:");
 
-        jTextField6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextSoLuongTra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         jLabel29.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel29.setText("Ngày trả:");
 
-        jTextField7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTextNgayTra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         jButton10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton10.setText("Xác nhận");
+        jButton10.setText("Trả sách");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+
+        jLabel41.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel41.setText("Số lượng:");
+
+        jTextConLai.setEditable(false);
+        jTextConLai.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        jLabel42.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel42.setText("Thanh toán:");
+
+        jTextTratiencoc.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+
+        jLabel43.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel43.setText("Nợ:");
+
+        jTextField6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         org.jdesktop.layout.GroupLayout JPdktraSachLayout = new org.jdesktop.layout.GroupLayout(JPdktraSach);
         JPdktraSach.setLayout(JPdktraSachLayout);
@@ -1300,20 +1337,31 @@ public class MainForm extends javax.swing.JFrame {
                         .add(18, 18, 18)
                         .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(JPdktraSachLayout.createSequentialGroup()
-                                .add(jLabel15)
-                                .add(18, 18, 18)
-                                .add(jTextField6))
-                            .add(JPdktraSachLayout.createSequentialGroup()
                                 .add(jLabel14)
                                 .add(18, 18, 18)
                                 .add(jComboBox7, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .add(JPdktraSachLayout.createSequentialGroup()
-                                .add(jLabel29)
-                                .add(0, 0, Short.MAX_VALUE))
-                            .add(jTextField7)
+                            .add(jTextNgayTra)
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, JPdktraSachLayout.createSequentialGroup()
                                 .add(0, 0, Short.MAX_VALUE)
-                                .add(jButton10)))))
+                                .add(jButton10))
+                            .add(JPdktraSachLayout.createSequentialGroup()
+                                .add(jLabel15)
+                                .add(18, 18, 18)
+                                .add(jTextSoLuongTra))
+                            .add(JPdktraSachLayout.createSequentialGroup()
+                                .add(jLabel41)
+                                .add(39, 39, 39)
+                                .add(jTextConLai))
+                            .add(jTextTratiencoc)
+                            .add(JPdktraSachLayout.createSequentialGroup()
+                                .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                                    .add(jLabel29)
+                                    .add(jLabel42))
+                                .add(0, 0, Short.MAX_VALUE))
+                            .add(JPdktraSachLayout.createSequentialGroup()
+                                .add(jLabel43, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                                .add(jTextField6)))))
                 .add(44, 44, 44))
         );
         JPdktraSachLayout.setVerticalGroup(
@@ -1325,25 +1373,36 @@ public class MainForm extends javax.swing.JFrame {
                     .add(jComboBox2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jLabel30)
                     .add(jTextField8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                .add(32, 32, 32)
+                .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                    .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 358, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(JPdktraSachLayout.createSequentialGroup()
-                        .add(52, 52, 52)
                         .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(jLabel14)
                             .add(jComboBox7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                        .add(34, 34, 34)
+                        .add(18, 18, 18)
+                        .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                            .add(jLabel41)
+                            .add(jTextConLai, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .add(18, 18, 18)
                         .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                             .add(jLabel15)
+                            .add(jTextSoLuongTra, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(jLabel29)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(jTextNgayTra, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(jLabel42)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                        .add(jTextTratiencoc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
+                            .add(jLabel43)
                             .add(jTextField6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(18, 18, 18)
-                        .add(jLabel29)
-                        .add(18, 18, 18)
-                        .add(jTextField7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(43, 43, 43)
-                        .add(jButton10))
-                    .add(JPdktraSachLayout.createSequentialGroup()
-                        .add(32, 32, 32)
-                        .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 358, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                        .add(jButton10)
+                        .add(35, 35, 35)))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 18, Short.MAX_VALUE)
                 .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(thoatTra)
@@ -1421,7 +1480,7 @@ public class MainForm extends javax.swing.JFrame {
         jScrollPane9.setViewportView(bangSach2);
 
         timMaKho.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        //timMaKho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "KH1", "KH2", "KH3" }));
+        timMaKho.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "KH1", "KH2", "KH3" }));
         timMaKho.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 timMaKhoActionPerformed(evt);
@@ -1668,19 +1727,19 @@ public class MainForm extends javax.swing.JFrame {
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sách còn trong kho", "Sách đã cho mượn" }));
 
         jLabel32.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel32.setText("Thời gian:");
+        jLabel32.setText("Tháng:");
 
-        jComboBox4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Theo tuần", "Theo tháng", "Theo quý", "Theo năm" }));
+        selectThang.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        selectThang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "None" }));
 
-        jButton4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton4.setText("Thống kê");
+        buttomThongke.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        buttomThongke.setText("Thống kê");
 
-        jButton5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton5.setText("Xuất file");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        buttomXuatFile.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        buttomXuatFile.setText("Xuất file");
+        buttomXuatFile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                buttomXuatFileActionPerformed(evt);
             }
         });
 
@@ -1705,6 +1764,12 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        jLabel45.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel45.setText("Quý");
+
+        selectQuy.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        selectQuy.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Quý I", "Quý II", "Quý III", "Quý IV", "None" }));
+
         org.jdesktop.layout.GroupLayout JPtkSachLayout = new org.jdesktop.layout.GroupLayout(JPtkSach);
         JPtkSach.setLayout(JPtkSachLayout);
         JPtkSachLayout.setHorizontalGroup(
@@ -1712,23 +1777,27 @@ public class MainForm extends javax.swing.JFrame {
             .add(JPtkSachLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane11)
+                    .add(jScrollPane11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
                     .add(JPtkSachLayout.createSequentialGroup()
                         .add(jLabel31)
                         .add(18, 18, 18)
                         .add(jComboBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(18, 18, 18)
+                        .add(46, 46, 46)
                         .add(jLabel32)
                         .add(18, 18, 18)
-                        .add(jComboBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(55, 55, 55)
-                        .add(jButton4)
-                        .add(43, 43, 43)
-                        .add(jButton5)
-                        .add(0, 65, Short.MAX_VALUE)))
+                        .add(selectThang, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(30, 30, 30)
+                        .add(jLabel45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(18, 18, 18)
+                        .add(selectQuy, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(61, 61, 61)
+                        .add(buttomThongke)
+                        .add(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .add(org.jdesktop.layout.GroupLayout.TRAILING, JPtkSachLayout.createSequentialGroup()
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(buttomXuatFile)
+                .add(20, 20, 20)
                 .add(jButton6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(33, 33, 33))
         );
@@ -1740,13 +1809,16 @@ public class MainForm extends javax.swing.JFrame {
                     .add(jLabel31)
                     .add(jComboBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jLabel32)
-                    .add(jComboBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton4)
-                    .add(jButton5))
+                    .add(selectThang, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jLabel45)
+                    .add(selectQuy, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(buttomThongke))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE)
+                .add(jScrollPane11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jButton6)
+                .add(JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jButton6)
+                    .add(buttomXuatFile))
                 .addContainerGap())
         );
 
@@ -2356,7 +2428,10 @@ public class MainForm extends javax.swing.JFrame {
 
     private void luuTraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_luuTraActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
+        Object[] option = {"Có", "Không"};
+        int n = JOptionPane.showOptionDialog(this, "Áp dụng thay đổi?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
+        if (n == 0)
+            JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
     }//GEN-LAST:event_luuTraActionPerformed
 
     private void inputMaSachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputMaSachActionPerformed
@@ -2539,10 +2614,10 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_timMaKhoActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void buttomXuatFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttomXuatFileActionPerformed
         // TODO add your handling code here:
         int returnVal = fileDialog.showSaveDialog(null);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_buttomXuatFileActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
@@ -2590,6 +2665,30 @@ public class MainForm extends javax.swing.JFrame {
                 jComboBox7.addItem(temp[i]);
         }
     }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
+        // TODO add your handling code here:
+        //lưu ý
+        String soluong = connectDatabase.getSingleData("select SOLUONG from MUON where MAMUON = '" + jComboBox2.getSelectedItem() + "' and MASACH = '" + jComboBox7.getSelectedItem() + "'").replace(",", "");
+        jTextConLai.setText(soluong);
+        //System.out.println();
+    }//GEN-LAST:event_jComboBox7ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        String soluong = connectDatabase.getSingleData("select SOLUONG from MUON where MAMUON = '" + jComboBox2.getSelectedItem() + "' and MASACH = '" + jComboBox7.getSelectedItem() + "'").replace(",", "");
+        //int a = Integer.parseInt(soluong);
+        if (jTextSoLuongTra.equals(""))
+            jTextConLai.setText(String.valueOf(Integer.parseInt(soluong)));
+         else {
+             if (Integer.parseInt(jTextSoLuongTra.getText()) <= Integer.parseInt(jTextConLai.getText())) {
+                 jTextConLai.setText(String.valueOf(Integer.parseInt(soluong) - Integer.parseInt(jTextSoLuongTra.getText())));
+                 jTextSoLuongTra.setText("");
+             } else {
+                 JOptionPane.showMessageDialog(this, "Số sách trả sai, vui lòng nhập lại!");
+             }
+        }
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2651,7 +2750,9 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JButton buttomLuu;
     private javax.swing.JButton buttomTHoatXoa;
     private javax.swing.JButton buttomThoat;
+    private javax.swing.JButton buttomThongke;
     private javax.swing.JButton buttomXoaDG;
+    private javax.swing.JButton buttomXuatFile;
     private javax.swing.JMenu capNhatDocGia;
     private javax.swing.JMenu capNhatKho;
     private javax.swing.JLayeredPane cardLayout;
@@ -2697,8 +2798,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -2706,7 +2805,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
     private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
@@ -2745,6 +2843,11 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -2773,14 +2876,17 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTable jTable3;
     private javax.swing.JTable jTable5;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextConLai;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextNgayTra;
+    private javax.swing.JTextField jTextSoLuongTra;
+    private javax.swing.JTextField jTextTratiencoc;
     private javax.swing.JScrollPane log;
     private javax.swing.JTextArea logThemDG;
     private javax.swing.JTextArea logThemSach;
@@ -2795,6 +2901,8 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel ngonNgu;
     private javax.swing.JTextField nhapMaDon;
     private javax.swing.JComboBox<String> selectGioiTinh;
+    private javax.swing.JComboBox<String> selectQuy;
+    private javax.swing.JComboBox<String> selectThang;
     private javax.swing.JLabel soLuong;
     private javax.swing.JLabel soThe;
     private javax.swing.JLabel tensach;

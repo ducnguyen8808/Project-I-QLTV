@@ -5,7 +5,7 @@ import java.util.Set;
 public class ConnectDatabase {
     public Connection CreatConnect() {
         String DB_URL = "jdbc:sqlserver://localhost:1433;databaseName=QLThuVien";
-        String USER = "admin";
+        String USER = "sa";
         String PASSWORD = "1212";
         Connection connection = null;
         try {
@@ -386,5 +386,4 @@ public class ConnectDatabase {
         }
         return listSachMuon;
     }
-
 }
