@@ -64,7 +64,7 @@ public class MainForm extends javax.swing.JFrame {
 
         cardLayout = new javax.swing.JLayeredPane();
         Home = new javax.swing.JPanel();
-        jLabel44 = new javax.swing.JLabel();
+        HomeImage = new javax.swing.JLabel();
         JPthemSach = new javax.swing.JPanel();
         tensach = new javax.swing.JLabel();
         inputTenSach = new javax.swing.JTextField();
@@ -281,7 +281,7 @@ public class MainForm extends javax.swing.JFrame {
         cardLayout.setPreferredSize(new java.awt.Dimension(800, 488));
         cardLayout.setLayout(new java.awt.CardLayout());
 
-        Home.setBackground(new java.awt.Color(0, 255, 204));
+        Home.setBackground(new java.awt.Color(255, 255, 255));
         Home.setPreferredSize(new java.awt.Dimension(800, 510));
         Home.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -289,9 +289,9 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
         Home.setLayout(null);
-        Home.add(jLabel44);
-        jLabel44.setBounds(0, 0, 800, 510);
-
+        Home.add(HomeImage);
+        HomeImage.setBounds(0, 0, 800, 510);
+        HomeImage.setIcon(new ImageIcon("src\\main\\java\\image\\FileHome.jpg"));
         cardLayout.add(Home, "card10");
 
         JPthemSach.setBackground(new java.awt.Color(214, 217, 223));
@@ -2632,8 +2632,10 @@ public class MainForm extends javax.swing.JFrame {
         model.removeRow(indexRow);
     }//GEN-LAST:event_xoaSachMActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) throws SQLException {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) throws SQLException {/*
+        GEN-FIRST:event_jButton11ActionPerformed
+         TODO add your handling code here:
+        */
         if (jTable5.getRowCount() == 0) {
             JOptionPane.showMessageDialog(this, "Lỗi, phiếu mượn hiện đang rỗng!");
         } else {
@@ -2641,10 +2643,11 @@ public class MainForm extends javax.swing.JFrame {
             int n = JOptionPane.showOptionDialog(this, "Xác nhận hoá đơn?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
             if (n == 0) {
                 for (int i = 0; i < jTable5.getRowCount(); i++) {
-                    String tmp = new String("insert into MUON (MAMUON, MATHE, NGAYMUON, DKTRA, MASACH, MATHUTHU, SOLUONG) values ");
-                    tmp += "('" +nhapMaDon.getText() + "','" + jComboBox1.getSelectedItem() + "','" + jTable5.getValueAt(i, 4) + "','" + jTable5.getValueAt(i, 5) + "','" + jTable5.getValueAt(i, 0) + "','" + jTextField1.getText() + "','" + jTable5.getValueAt(i, 3) + "')";
+                    String tmp = new String("insert into MUON (MAMUON, MATHE, NGAYMUON, DKTRA, MASACH, MATHUTHU, SOLUONG, TINHTRANG) values ");
+                    tmp += "('" + nhapMaDon.getText() + "','" + jComboBox1.getSelectedItem() + "','" + jTable5.getValueAt(i, 4) + "','" + jTable5.getValueAt(i, 5) + "','" + jTable5.getValueAt(i, 0) + "','" + jTextField1.getText() + "','" + jTable5.getValueAt(i, 3) + "','" + 0 + "')";
                     String str = new String("insert into DKMUON (MAMUON, TIENCOC) values ");
                     str += "('" + nhapMaDon.getText() + "','" + coc.getText() + "')";
+                    System.out.println(tmp);
                     connectDatabase.insertData(tmp);
                     connectDatabase.insertData(str);
                     System.out.println(tmp);
@@ -2729,6 +2732,7 @@ public class MainForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu DangXuat;
     private javax.swing.JPanel Home;
+    private javax.swing.JLabel HomeImage;
     private javax.swing.JPanel JPdkMuon;
     private javax.swing.JPanel JPdktraSach;
     private javax.swing.JPanel JPdsDocGia;
@@ -2846,7 +2850,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
