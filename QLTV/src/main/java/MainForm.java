@@ -233,25 +233,21 @@ public class MainForm extends javax.swing.JFrame {
         JPtkSach = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
         jComboBox3 = new javax.swing.JComboBox<>();
-        jLabel32 = new javax.swing.JLabel();
-        selectThang = new javax.swing.JComboBox<>();
         buttomThongke = new javax.swing.JButton();
         buttomXuatFile = new javax.swing.JButton();
         jScrollPane11 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButton6 = new javax.swing.JButton();
-        jLabel45 = new javax.swing.JLabel();
-        selectQuy = new javax.swing.JComboBox<>();
         JPtkDocGia = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jComboBox5 = new javax.swing.JComboBox<>();
-        jLabel39 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<>();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jScrollPane12 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jButton9 = new javax.swing.JButton();
+        jLabel32 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox<>();
         menu = new javax.swing.JMenuBar();
         Update = new javax.swing.JMenu();
         capNhatKho = new javax.swing.JMenu();
@@ -288,10 +284,11 @@ public class MainForm extends javax.swing.JFrame {
                 HomeMouseClicked(evt);
             }
         });
+
         Home.setLayout(null);
-        Home.add(HomeImage);
-        HomeImage.setBounds(0, 0, 800, 510);
         HomeImage.setIcon(new ImageIcon("src\\main\\java\\image\\FileHome.jpg"));
+        HomeImage.setBounds(0, 0, 800, 510);
+        Home.add(HomeImage);
         cardLayout.add(Home, "card10");
 
         JPthemSach.setBackground(new java.awt.Color(214, 217, 223));
@@ -1726,12 +1723,6 @@ public class MainForm extends javax.swing.JFrame {
         jComboBox3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sách còn trong kho", "Sách đã cho mượn" }));
 
-        jLabel32.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel32.setText("Tháng:");
-
-        selectThang.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        selectThang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "None" }));
-
         buttomThongke.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         buttomThongke.setText("Thống kê");
 
@@ -1764,12 +1755,6 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel45.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel45.setText("Quý");
-
-        selectQuy.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        selectQuy.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Quý I", "Quý II", "Quý III", "Quý IV", "None" }));
-
         org.jdesktop.layout.GroupLayout JPtkSachLayout = new org.jdesktop.layout.GroupLayout(JPtkSach);
         JPtkSach.setLayout(JPtkSachLayout);
         JPtkSachLayout.setHorizontalGroup(
@@ -1782,22 +1767,14 @@ public class MainForm extends javax.swing.JFrame {
                         .add(jLabel31)
                         .add(18, 18, 18)
                         .add(jComboBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(46, 46, 46)
-                        .add(jLabel32)
-                        .add(18, 18, 18)
-                        .add(selectThang, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(30, 30, 30)
-                        .add(jLabel45, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(18, 18, 18)
-                        .add(selectQuy, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(61, 61, 61)
+                        .add(269, 269, 269)
+                        .add(buttomXuatFile)
+                        .add(41, 41, 41)
                         .add(buttomThongke)
                         .add(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .add(org.jdesktop.layout.GroupLayout.TRAILING, JPtkSachLayout.createSequentialGroup()
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(buttomXuatFile)
-                .add(20, 20, 20)
                 .add(jButton6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(33, 33, 33))
         );
@@ -1808,17 +1785,12 @@ public class MainForm extends javax.swing.JFrame {
                 .add(JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel31)
                     .add(jComboBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel32)
-                    .add(selectThang, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel45)
-                    .add(selectQuy, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(buttomThongke))
+                    .add(buttomThongke)
+                    .add(buttomXuatFile))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jScrollPane11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButton6)
-                    .add(buttomXuatFile))
+                .add(jButton6)
                 .addContainerGap())
         );
 
@@ -1830,13 +1802,12 @@ public class MainForm extends javax.swing.JFrame {
         jLabel33.setText("Thống kê:");
 
         jComboBox5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Có mượn", "Chưa mượn", "Bị phạt" }));
-
-        jLabel39.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel39.setText("Thời gian thống kê:");
-
-        jComboBox6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Theo tuần", "Theo tháng", "Theo quý", "Theo năm" }));
+        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Có mượn", "Chưa mượn" }));
+        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox5ActionPerformed(evt);
+            }
+        });
 
         jButton7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton7.setText("Thống kê");
@@ -1870,6 +1841,12 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
+        jLabel32.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel32.setText("Quá hạn:");
+
+        jComboBox4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Có quá hạn", "Không Quá hạn" }));
+
         org.jdesktop.layout.GroupLayout JPtkDocGiaLayout = new org.jdesktop.layout.GroupLayout(JPtkDocGia);
         JPtkDocGia.setLayout(JPtkDocGiaLayout);
         JPtkDocGiaLayout.setHorizontalGroup(
@@ -1877,21 +1854,22 @@ public class MainForm extends javax.swing.JFrame {
             .add(JPtkDocGiaLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(JPtkDocGiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane12)
+                    .add(JPtkDocGiaLayout.createSequentialGroup()
+                        .add(jScrollPane12)
+                        .addContainerGap())
                     .add(JPtkDocGiaLayout.createSequentialGroup()
                         .add(jLabel33)
                         .add(18, 18, 18)
                         .add(jComboBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(46, 46, 46)
+                        .add(jLabel32)
                         .add(18, 18, 18)
-                        .add(jLabel39)
-                        .add(18, 18, 18)
-                        .add(jComboBox6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(63, 63, 63)
-                        .add(jButton7)
-                        .add(41, 41, 41)
+                        .add(jComboBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 101, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 118, Short.MAX_VALUE)
                         .add(jButton8)
-                        .add(0, 46, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .add(44, 44, 44)
+                        .add(jButton7)
+                        .add(38, 38, 38))))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, JPtkDocGiaLayout.createSequentialGroup()
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .add(jButton9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -1904,10 +1882,10 @@ public class MainForm extends javax.swing.JFrame {
                 .add(JPtkDocGiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jLabel33)
                     .add(jComboBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel39)
-                    .add(jComboBox6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jButton7)
-                    .add(jButton8))
+                    .add(jButton8)
+                    .add(jLabel32)
+                    .add(jComboBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jScrollPane12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
                 .add(18, 18, 18)
@@ -2656,7 +2634,7 @@ public class MainForm extends javax.swing.JFrame {
             }
         }
         //thêm câu lệnh insert
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }                                         
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
         String str = (String) jComboBox2.getSelectedItem();
@@ -2692,6 +2670,10 @@ public class MainForm extends javax.swing.JFrame {
              }
         }
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2809,8 +2791,8 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
     private javax.swing.JComboBox<String> jComboBox7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -2844,13 +2826,11 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -2904,8 +2884,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel ngonNgu;
     private javax.swing.JTextField nhapMaDon;
     private javax.swing.JComboBox<String> selectGioiTinh;
-    private javax.swing.JComboBox<String> selectQuy;
-    private javax.swing.JComboBox<String> selectThang;
     private javax.swing.JLabel soLuong;
     private javax.swing.JLabel soThe;
     private javax.swing.JLabel tensach;
