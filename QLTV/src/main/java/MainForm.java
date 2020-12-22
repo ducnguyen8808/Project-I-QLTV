@@ -10,6 +10,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -167,7 +170,6 @@ public class MainForm extends javax.swing.JFrame {
         inputNgayMuon = new javax.swing.JTextField();
         jDuKienTra = new javax.swing.JLabel();
         inputDuKien = new javax.swing.JTextField();
-        jXuatHoaDon = new javax.swing.JButton();
         jLuu = new javax.swing.JButton();
         jThoat = new javax.swing.JLabel();
         nhapMaDon = new javax.swing.JTextField();
@@ -1059,9 +1061,6 @@ public class MainForm extends javax.swing.JFrame {
 
         inputDuKien.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jXuatHoaDon.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jXuatHoaDon.setText("Xuất hoá đơn");
-
         jLuu.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLuu.setText("Lưu");
         jLuu.addActionListener(new java.awt.event.ActionListener() {
@@ -1148,10 +1147,8 @@ public class MainForm extends javax.swing.JFrame {
                         .addContainerGap())))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, JPdkMuonLayout.createSequentialGroup()
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jXuatHoaDon)
-                .add(18, 18, 18)
                 .add(jLuu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(17, 17, 17)
+                .add(42, 42, 42)
                 .add(huyMuon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(23, 23, 23))
         );
@@ -1208,10 +1205,9 @@ public class MainForm extends javax.swing.JFrame {
                             .add(coc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(18, 18, 18)))
                 .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jXuatHoaDon)
                     .add(huyMuon)
                     .add(jLuu))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         cardLayout.add(JPdkMuon, "card6");
@@ -1735,7 +1731,11 @@ public class MainForm extends javax.swing.JFrame {
         buttomXuatFile.setText("Xuất file");
         buttomXuatFile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttomXuatFileActionPerformed(evt);
+                try {
+                    buttomXuatFileActionPerformed(evt);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -1806,11 +1806,6 @@ public class MainForm extends javax.swing.JFrame {
 
         jbuttomThongKe.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jbuttomThongKe.setText("Thống kê");
-        jbuttomThongKe.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jbuttomThongKeMouseClicked(evt);
-            }
-        });
         jbuttomThongKe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbuttomThongKeActionPerformed(evt);
@@ -1821,7 +1816,11 @@ public class MainForm extends javax.swing.JFrame {
         jXuatFile.setText("Xuất file");
         jXuatFile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jXuatFileActionPerformed(evt);
+                try {
+                    jXuatFileActionPerformed(evt);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
             }
         });
 
@@ -1888,7 +1887,7 @@ public class MainForm extends javax.swing.JFrame {
                     .add(jQuaHan)
                     .add(inputTinhTrang3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
+                .add(jScrollPane12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
                 .add(18, 18, 18)
                 .add(jThoat2)
                 .addContainerGap())
@@ -2598,14 +2597,28 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_timMaKhoActionPerformed
 
-    private void buttomXuatFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttomXuatFileActionPerformed
+    private void buttomXuatFileActionPerformed(java.awt.event.ActionEvent evt) throws FileNotFoundException {//GEN-FIRST:event_buttomXuatFileActionPerformed
         // TODO add your handling code here:
+        FileExcel fileExcel = new FileExcel();
         int returnVal = fileDialog.showSaveDialog(null);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            java.io.File file = fileDialog.getSelectedFile();
+            String url = fileDialog.getCurrentDirectory().toString() + "\\" + file.getName() + ".xlsx";
+            fileExcel.exportExcel(jThongKeSach, url);
+            JOptionPane.showMessageDialog(this, "Xuất file thống kê thành công!");
+        }
     }//GEN-LAST:event_buttomXuatFileActionPerformed
 
-    private void jXuatFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jXuatFileActionPerformed
+    private void jXuatFileActionPerformed(java.awt.event.ActionEvent evt) throws FileNotFoundException {//GEN-FIRST:event_jXuatFileActionPerformed
         // TODO add your handling code here:
+        FileExcel fileExcel = new FileExcel();
         int returnVal = fileDialog.showSaveDialog(null);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            java.io.File file = fileDialog.getSelectedFile();
+            String url = fileDialog.getCurrentDirectory().toString() + "\\" + file.getName() + ".xlsx";
+            fileExcel.exportExcel(jThongKeDocGia, url);
+            JOptionPane.showMessageDialog(this, "Xuất file thống kê thành công!");
+        }
     }//GEN-LAST:event_jXuatFileActionPerformed
 
     private void xoaSachMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoaSachMActionPerformed
@@ -2700,12 +2713,6 @@ public class MainForm extends javax.swing.JFrame {
             ));
         }
     }//GEN-LAST:event_buttomThongkeMouseClicked
-
-    private void jbuttomThongKeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbuttomThongKeMouseClicked
-        // TODO add your handling code here:
-        //thêm ở đây
-
-    }//GEN-LAST:event_jbuttomThongKeMouseClicked
 
     private void jbuttomThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttomThongKeActionPerformed
         // TODO add your handling code here:
@@ -2923,7 +2930,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTable jTraTam;
     private javax.swing.JTextField jTratiencoc;
     private javax.swing.JButton jXuatFile;
-    private javax.swing.JButton jXuatHoaDon;
     private javax.swing.JButton jbuttomThongKe;
     private javax.swing.JScrollPane log;
     private javax.swing.JTextArea logThemDG;
