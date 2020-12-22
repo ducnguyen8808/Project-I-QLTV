@@ -240,15 +240,13 @@ public class MainForm extends javax.swing.JFrame {
         jThongKeSach = new javax.swing.JTable();
         jButton6 = new javax.swing.JButton();
         JPtkDocGia = new javax.swing.JPanel();
-        jThongKe2 = new javax.swing.JLabel();
-        inputTinhTrang2 = new javax.swing.JComboBox<>();
         jbuttomThongKe = new javax.swing.JButton();
         jXuatFile = new javax.swing.JButton();
         jScrollPane12 = new javax.swing.JScrollPane();
         jThongKeDocGia = new javax.swing.JTable();
         jThoat2 = new javax.swing.JButton();
         jQuaHan = new javax.swing.JLabel();
-        inputTinhTrangQuaHan = new javax.swing.JComboBox<>();
+        inputTinhTrang3 = new javax.swing.JComboBox<>();
         menu = new javax.swing.JMenuBar();
         Update = new javax.swing.JMenu();
         capNhatKho = new javax.swing.JMenu();
@@ -286,6 +284,7 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
         Home.setLayout(null);
+
         HomeImage.setIcon(new ImageIcon("src\\main\\java\\image\\FileHome.jpg")); // NOI18N
         Home.add(HomeImage);
         HomeImage.setBounds(0, 0, 800, 510);
@@ -1770,10 +1769,11 @@ public class MainForm extends javax.swing.JFrame {
                 .add(JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jScrollPane11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
                     .add(JPtkSachLayout.createSequentialGroup()
+                        .add(25, 25, 25)
                         .add(jThongKe)
-                        .add(18, 18, 18)
+                        .add(37, 37, 37)
                         .add(selectTinhTrang, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(269, 269, 269)
+                        .add(225, 225, 225)
                         .add(buttomXuatFile)
                         .add(41, 41, 41)
                         .add(buttomThongke)
@@ -1804,19 +1804,18 @@ public class MainForm extends javax.swing.JFrame {
 
         JPtkDocGia.setPreferredSize(new java.awt.Dimension(800, 488));
 
-        jThongKe2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jThongKe2.setText("Thống kê:");
-
-        inputTinhTrang2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        inputTinhTrang2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Có mượn", "Chưa mượn" }));
-        inputTinhTrang2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputTinhTrang2ActionPerformed(evt);
-            }
-        });
-
         jbuttomThongKe.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jbuttomThongKe.setText("Thống kê");
+        jbuttomThongKe.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbuttomThongKeMouseClicked(evt);
+            }
+        });
+        jbuttomThongKe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbuttomThongKeActionPerformed(evt);
+            }
+        });
 
         jXuatFile.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jXuatFile.setText("Xuất file");
@@ -1828,13 +1827,13 @@ public class MainForm extends javax.swing.JFrame {
 
         jThongKeDocGia.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Mã độc giả", "Họ tên", "Giới tính", "CMND", "Ngày sinh", "SĐT", "Đơn phạt", "Tiền phạt"
+                "Mã độc giả", "Họ tên", "Giới tính", "CMND", "Ngày sinh", "SĐT", "Tiền phạt"
             }
         ));
         jScrollPane12.setViewportView(jThongKeDocGia);
@@ -1848,10 +1847,11 @@ public class MainForm extends javax.swing.JFrame {
         });
 
         jQuaHan.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jQuaHan.setText("Quá hạn:");
+        jQuaHan.setText("Bị phạt:");
+        jQuaHan.setToolTipText("");
 
-        inputTinhTrangQuaHan.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        inputTinhTrangQuaHan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Có quá hạn", "Không Quá hạn" }));
+        inputTinhTrang3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        inputTinhTrang3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Có bị phạt", "Không bị phạt" }));
 
         org.jdesktop.layout.GroupLayout JPtkDocGiaLayout = new org.jdesktop.layout.GroupLayout(JPtkDocGia);
         JPtkDocGia.setLayout(JPtkDocGiaLayout);
@@ -1861,17 +1861,14 @@ public class MainForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .add(JPtkDocGiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(JPtkDocGiaLayout.createSequentialGroup()
-                        .add(jScrollPane12)
+                        .add(jScrollPane12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
                         .addContainerGap())
                     .add(JPtkDocGiaLayout.createSequentialGroup()
-                        .add(jThongKe2)
-                        .add(18, 18, 18)
-                        .add(inputTinhTrang2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(46, 46, 46)
+                        .add(21, 21, 21)
                         .add(jQuaHan)
-                        .add(18, 18, 18)
-                        .add(inputTinhTrangQuaHan, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 101, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 118, Short.MAX_VALUE)
+                        .add(42, 42, 42)
+                        .add(inputTinhTrang3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .add(jXuatFile)
                         .add(44, 44, 44)
                         .add(jbuttomThongKe)
@@ -1886,14 +1883,12 @@ public class MainForm extends javax.swing.JFrame {
             .add(JPtkDocGiaLayout.createSequentialGroup()
                 .add(19, 19, 19)
                 .add(JPtkDocGiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jThongKe2)
-                    .add(inputTinhTrang2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(jbuttomThongKe)
                     .add(jXuatFile)
                     .add(jQuaHan)
-                    .add(inputTinhTrangQuaHan, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(inputTinhTrang3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
+                .add(jScrollPane12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
                 .add(18, 18, 18)
                 .add(jThoat2)
                 .addContainerGap())
@@ -2280,6 +2275,7 @@ public class MainForm extends javax.swing.JFrame {
         jTextField1.setEnabled(false);
         jTextField2.setEnabled(false);
         showTenDocGia.setEnabled(false);
+
     }//GEN-LAST:event_dkMuonActionPerformed
 
     private void traSachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_traSachActionPerformed
@@ -2475,8 +2471,8 @@ public class MainForm extends javax.swing.JFrame {
                 if (t <= s) {
                     model.addRow(new Object[] {
                             inputMaSachMuon.getText(),
-                            connectDatabase.getSingleData("select TENSACH from SACH where MASACH = '" + inputMaSachMuon.getText() + "'"),
-                            connectDatabase.getSingleData("select TACGIA from SACH where MASACH = '" + inputMaSachMuon.getText() + "'"),
+                            connectDatabase.getSingleData("select TENSACH from SACH where MASACH = '" + inputMaSachMuon.getText() + "'").replace(",", ""),
+                            connectDatabase.getSingleData("select TACGIA from SACH where MASACH = '" + inputMaSachMuon.getText() + "'").replace(",", ""),
                             inputSoLuongMuon.getText(),
                             convertMMDDYY(inputNgayMuon.getText()),
                             convertMMDDYY(inputDuKien.getText())
@@ -2512,14 +2508,14 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
         disableAllPanel();
         JPtkSach.setVisible(true);
-
+        jThongKeSach.setEnabled(false);
     }//GEN-LAST:event_tkSachActionPerformed
 
     private void tkDocGiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tkDocGiaActionPerformed
         // TODO add your handling code here:
         disableAllPanel();
         JPtkDocGia.setVisible(true);
-
+        jThongKeDocGia.setEnabled(false);
     }//GEN-LAST:event_tkDocGiaActionPerformed
 
     private void dsSachMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dsSachMouseClicked
@@ -2681,10 +2677,6 @@ public class MainForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTraSachActionPerformed
 
-    private void inputTinhTrang2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputTinhTrang2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_inputTinhTrang2ActionPerformed
-
     private void buttomThongkeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttomThongkeMouseClicked
         // TODO add your handling code here:
         int i = selectTinhTrang.getSelectedIndex();
@@ -2699,17 +2691,47 @@ public class MainForm extends javax.swing.JFrame {
             ));
         } else {
             jThongKeSach.setModel(new javax.swing.table.DefaultTableModel(
-                    connectDatabase.getTkDsSach("select SACH.MASACH,\tTENSACH, SACH.TACGIA, NXB.TENNXB, TEMP.SL\n" +
-                            "from SACH\n" +
-                            "join NXB on NXB.MANXB = SACH.MANXB\n" +
-                            "join (select MASACH, sum(SOLUONG) as SL from MUON group by MASACH) as TEMP on TEMP.MASACH = SACH.MASACH\n" +
-                            "where SACH.MASACH in (select MASACH from MUON group by MASACH)", 1),
+                    connectDatabase.getTkDsSach("select DOCGIA.MATHE, HOTEN, GIOITINH, CMND, NGAYSINH, SDT\n" +
+                            "from DOCGIA\n" +
+                            "where DOCGIA.MATHE in (select MATHE from MUON group by MATHE) and DOCGIA.MATHE not in (select MATHE from TRA group by MATHE)", 1),
                     new String [] {
                             "Mã sách", "Tên sách", "Tác giả", "Nhà xuất bản", "Số lượng", "Kho"
                     }
             ));
         }
     }//GEN-LAST:event_buttomThongkeMouseClicked
+
+    private void jbuttomThongKeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbuttomThongKeMouseClicked
+        // TODO add your handling code here:
+        //thêm ở đây
+
+    }//GEN-LAST:event_jbuttomThongKeMouseClicked
+
+    private void jbuttomThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttomThongKeActionPerformed
+        // TODO add your handling code here:
+        int chose = inputTinhTrang3.getSelectedIndex();
+        if (chose == 0) {
+            jThongKeDocGia.setModel(new javax.swing.table.DefaultTableModel(
+                    connectDatabase.getTkDsMuon("select DOCGIA.MATHE, HOTEN, GIOITINH, CMND, NGAYSINH, SDT, TP.TIENPHAT\n" +
+                            "from DOCGIA\n" +
+                            "join (select MATHE, sum(PHAT) as TIENPHAT from TRA group by MATHE) as TP on TP.MATHE = DOCGIA.MATHE\n" +
+                            "where DOCGIA.MATHE in (select MATHE from MUON group by MATHE)\n", 0),
+                    new String [] {
+                            "Mã độc giả", "Họ tên", "Giới tính", "CMND", "Ngày sinh", "SĐT", "Tiền phạt"
+                    }
+            ));
+        } else {
+            jThongKeDocGia.setModel(new javax.swing.table.DefaultTableModel(
+                    connectDatabase.getTkDsMuon("select DOCGIA.MATHE, HOTEN, GIOITINH, CMND, NGAYSINH, SDT\n" +
+                            "from DOCGIA\n" +
+                            "where DOCGIA.MATHE in (select MATHE from MUON group by MATHE) and DOCGIA.MATHE not in (select MATHE from TRA group by MATHE)", 1),
+                    new String [] {
+                            "Mã độc giả", "Họ tên", "Giới tính", "CMND", "Ngày sinh", "SĐT", "Tiền phạt"
+                    }
+            ));
+        }
+
+    }//GEN-LAST:event_jbuttomThongKeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2820,8 +2842,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTextField inputSoThe;
     private javax.swing.JTextField inputTacGia;
     private javax.swing.JTextField inputTenSach;
-    private javax.swing.JComboBox<String> inputTinhTrang2;
-    private javax.swing.JComboBox<String> inputTinhTrangQuaHan;
+    private javax.swing.JComboBox<String> inputTinhTrang3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton6;
@@ -2894,7 +2915,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jThoat;
     private javax.swing.JButton jThoat2;
     private javax.swing.JLabel jThongKe;
-    private javax.swing.JLabel jThongKe2;
     private javax.swing.JTable jThongKeDocGia;
     private javax.swing.JTable jThongKeSach;
     private javax.swing.JLabel jTienCoc;

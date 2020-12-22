@@ -413,4 +413,32 @@ public class ConnectDatabase {
         }
         return tkDsSach;
     }
+    private String[][] tkDsMuon = new String[50][7];
+    public String[][] getTkDsMuon(String str, int chose) {
+        for (int i = 0; i < tkDsMuon.length; i++) {
+            for (int k = 0; k < tkDsMuon[i].length; k++)
+                tkDsMuon[i][k] = null;
+        }
+        try {
+            Connection connection = CreatConnect();
+            Statement statement = getStatement(connection);
+            ResultSet resultSet = statement.executeQuery(str);
+            int index =0;
+            while (resultSet.next()) {
+                tkDsMuon[index][0] = resultSet.getString(1);
+                tkDsMuon[index][1] = resultSet.getString(2);
+                tkDsMuon[index][2] = resultSet.getString(3);
+                tkDsMuon[index][3] = resultSet.getString(4);
+                tkDsMuon[index][4] = resultSet.getString(5);
+                tkDsMuon[index][5] = resultSet.getString(6);
+                if (chose == 0)
+                    tkDsMuon[index][6] = resultSet.getString(7);
+                index++;
+            }
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return tkDsMuon;
+    }
 }
