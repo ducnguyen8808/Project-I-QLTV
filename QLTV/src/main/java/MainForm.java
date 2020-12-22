@@ -10,6 +10,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.InputStream;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -1725,6 +1726,11 @@ public class MainForm extends javax.swing.JFrame {
 
         buttomThongke.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         buttomThongke.setText("Thống kê");
+        buttomThongke.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                buttomThongkeMouseClicked(evt);
+            }
+        });
 
         buttomXuatFile.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         buttomXuatFile.setText("Xuất file");
@@ -2464,8 +2470,9 @@ public class MainForm extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jHoaDonTam.getModel();
         if (!inputNgayMuon.getText().equals("") && !inputDuKien.getText().equals("") && !inputMaSachMuon.getText().equals("") && !inputSoLuongMuon.getText().equals("")) {
             if (connectDatabase.getSingleData("select MASACH from SACH").contains(inputMaSachMuon.getText())) {
-                int s = Integer.parseInt(connectDatabase.getSingleData("select SOLUONG from SACH where MASACH = '" + inputSoLuongMuon.getText() + "'").replace(",", ""));
-                if (Integer.parseInt(inputSoLuongMuon.getText()) <= s) {
+                int s = Integer.parseInt(connectDatabase.getSingleData("select SOLUONG from SACH where MASACH = '" + inputMaSachMuon.getText() + "'").replace(",", ""));
+                int t = Integer.parseInt(inputSoLuongMuon.getText());
+                if (t <= s) {
                     model.addRow(new Object[] {
                             inputMaSachMuon.getText(),
                             connectDatabase.getSingleData("select TENSACH from SACH where MASACH = '" + inputMaSachMuon.getText() + "'"),
@@ -2630,7 +2637,6 @@ public class MainForm extends javax.swing.JFrame {
                     tmp += "('" + nhapMaDon.getText() + "','" + jChonMaThe.getSelectedItem() + "','" + jHoaDonTam.getValueAt(i, 4) + "','" + jHoaDonTam.getValueAt(i, 5) + "','" + jHoaDonTam.getValueAt(i, 0) + "','" + jTextField1.getText() + "','" + jHoaDonTam.getValueAt(i, 3) + "','" + 0 + "')";
                     str += "('" + nhapMaDon.getText() + "','" + coc.getText() + "')";
                     connectDatabase.updateData("Update SACH Set SOLUONG = " + (soluong - Integer.parseInt((String) jHoaDonTam.getValueAt(i, 3))) + " where MASACH = '" + jHoaDonTam.getValueAt(i, 0) + "'");
-                    //System.out.println(jHoaDonTam.getValueAt(i, 3));
                     connectDatabase.updateData(tmp);
                     connectDatabase.updateData(str);
                 }
@@ -2678,6 +2684,32 @@ public class MainForm extends javax.swing.JFrame {
     private void inputTinhTrang2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputTinhTrang2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_inputTinhTrang2ActionPerformed
+
+    private void buttomThongkeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttomThongkeMouseClicked
+        // TODO add your handling code here:
+        int i = selectTinhTrang.getSelectedIndex();
+        if (i == 0) {
+            jThongKeSach.setModel(new javax.swing.table.DefaultTableModel(
+                    connectDatabase.getTkDsSach("select SACH.MASACH,\tTENSACH, SACH.TACGIA, NXB.TENNXB, SOLUONG, SACH.MAKHO\n" +
+                            "from SACH\n" +
+                            "join NXB on NXB.MANXB = SACH.MANXB", 0),
+                    new String [] {
+                            "Mã sách", "Tên sách", "Tác giả", "Nhà xuất bản", "Số lượng", "Kho"
+                    }
+            ));
+        } else {
+            jThongKeSach.setModel(new javax.swing.table.DefaultTableModel(
+                    connectDatabase.getTkDsSach("select SACH.MASACH,\tTENSACH, SACH.TACGIA, NXB.TENNXB, TEMP.SL\n" +
+                            "from SACH\n" +
+                            "join NXB on NXB.MANXB = SACH.MANXB\n" +
+                            "join (select MASACH, sum(SOLUONG) as SL from MUON group by MASACH) as TEMP on TEMP.MASACH = SACH.MASACH\n" +
+                            "where SACH.MASACH in (select MASACH from MUON group by MASACH)", 1),
+                    new String [] {
+                            "Mã sách", "Tên sách", "Tác giả", "Nhà xuất bản", "Số lượng", "Kho"
+                    }
+            ));
+        }
+    }//GEN-LAST:event_buttomThongkeMouseClicked
 
     /**
      * @param args the command line arguments

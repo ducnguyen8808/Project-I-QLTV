@@ -386,4 +386,31 @@ public class ConnectDatabase {
         }
         return listSachMuon;
     }
+    private String[][] tkDsSach = new String[50][6];
+    public String[][] getTkDsSach(String str, int chose) {
+        for (int i = 0; i < tkDsSach.length; i++) {
+            for (int k = 0; k < tkDsSach[i].length; k++)
+                tkDsSach[i][k] = null;
+        }
+        try {
+            Connection connection = CreatConnect();
+            Statement statement = getStatement(connection);
+            ResultSet resultSet = statement.executeQuery(str);
+            int index =0;
+            while (resultSet.next()) {
+                tkDsSach[index][0] = resultSet.getString(1);
+                tkDsSach[index][1] = resultSet.getString(2);
+                tkDsSach[index][2] = resultSet.getString(3);
+                tkDsSach[index][3] = resultSet.getString(4);
+                tkDsSach[index][4] = resultSet.getString(5);
+                if (chose == 0)
+                    tkDsSach[index][5] = resultSet.getString(6);
+                index++;
+            }
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return tkDsSach;
+    }
 }
