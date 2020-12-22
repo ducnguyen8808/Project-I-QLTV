@@ -3,9 +3,10 @@
     <output-path>$PROJECT_DIR$/out/artifacts/DEMO_jar</output-path>
     <root id="archive" name="DEMO.jar">
       <element id="module-output" name="DEMO" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/microsoft/sqlserver/mssql-jdbc/8.4.1.jre11/mssql-jdbc-8.4.1.jre11.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/swinglabs/swing-layout/1.0.3/swing-layout-1.0.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/mssql-jdbc-8.4.1.jre14.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/swing-layout-1.0.4.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/swinglabs/swing-layout/1.0.3/swing-layout-1.0.3.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

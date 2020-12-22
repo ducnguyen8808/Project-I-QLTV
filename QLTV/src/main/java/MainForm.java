@@ -66,17 +66,17 @@ public class MainForm extends javax.swing.JFrame {
         Home = new javax.swing.JPanel();
         HomeImage = new javax.swing.JLabel();
         JPthemSach = new javax.swing.JPanel();
-        tensach = new javax.swing.JLabel();
+        jTenSach = new javax.swing.JLabel();
         inputTenSach = new javax.swing.JTextField();
-        masach = new javax.swing.JLabel();
+        jMaSach = new javax.swing.JLabel();
         inputMaSach = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        jMaKho = new javax.swing.JLabel();
         inputSoLuong = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        jTacGia = new javax.swing.JLabel();
         inputTacGia = new javax.swing.JTextField();
-        maNXB = new javax.swing.JLabel();
+        jMaNXB = new javax.swing.JLabel();
         inputMaNXB = new javax.swing.JTextField();
-        monLoai = new javax.swing.JLabel();
+        jMonLoai = new javax.swing.JLabel();
         inputMonLoai = new javax.swing.JTextField();
         ngonNgu = new javax.swing.JLabel();
         inputNgonNgu = new javax.swing.JTextField();
@@ -119,93 +119,93 @@ public class MainForm extends javax.swing.JFrame {
         buttomThoat = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         logThemDG = new javax.swing.JTextArea();
-        jLabel34 = new javax.swing.JLabel();
+        jSDT = new javax.swing.JLabel();
         inputSDT = new javax.swing.JTextField();
         JPxoaDG = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        jDanhSachDocGia = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         dsDocGia = new javax.swing.JTable();
         jScrollPane5 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jLogXoaDocGia = new javax.swing.JTextArea();
         buttomXoaDG = new javax.swing.JButton();
         buttomTHoatXoa = new javax.swing.JButton();
         JPdsSach = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabelDanhSachSach = new javax.swing.JLabel();
         thoatDanhSachSach = new javax.swing.JButton();
         jScrollPane6 = new javax.swing.JScrollPane();
         bangSach1 = new javax.swing.JTable();
         JPdsDocGia = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        jDocGia = new javax.swing.JLabel();
         thoatDanhSachDG = new javax.swing.JButton();
         jScrollPane7 = new javax.swing.JScrollPane();
         dsDocGia1 = new javax.swing.JTable();
         JPdkMuon = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        jMaSoThe = new javax.swing.JLabel();
+        jMaThuThu = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        jTable5 = new javax.swing.JTable();
+        jHoaDonTam = new javax.swing.JTable();
         themSachM = new javax.swing.JButton();
         xoaSachM = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
+        jTongSach = new javax.swing.JLabel();
         tongSachMuon = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
+        jTienCoc = new javax.swing.JLabel();
         coc = new javax.swing.JTextField();
         huyMuon = new javax.swing.JButton();
-        jLabel35 = new javax.swing.JLabel();
+        jMaSach2 = new javax.swing.JLabel();
         inputMaSachMuon = new javax.swing.JTextField();
-        jLabel36 = new javax.swing.JLabel();
+        jSoLuong2 = new javax.swing.JLabel();
         inputSoLuongMuon = new javax.swing.JTextField();
         jTextField1 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
+        jTenThuThu = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        jChonMaThe = new javax.swing.JComboBox<>();
+        jTenDocGia = new javax.swing.JLabel();
+        showTenDocGia = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
-        jLabel37 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel38 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jLabel40 = new javax.swing.JLabel();
+        jNgayMuon = new javax.swing.JLabel();
+        inputNgayMuon = new javax.swing.JTextField();
+        jDuKienTra = new javax.swing.JLabel();
+        inputDuKien = new javax.swing.JTextField();
+        jXuatHoaDon = new javax.swing.JButton();
+        jLuu = new javax.swing.JButton();
+        jThoat = new javax.swing.JLabel();
         nhapMaDon = new javax.swing.JTextField();
         JPdktraSach = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
+        jMaDonMuon = new javax.swing.JLabel();
         thoatTra = new javax.swing.JButton();
         luuTra = new javax.swing.JButton();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel30 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        selectMaDon = new javax.swing.JComboBox<>();
+        jTenDocGia2 = new javax.swing.JLabel();
+        showTenDocGIa = new javax.swing.JTextField();
         jScrollPane13 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
-        jLabel14 = new javax.swing.JLabel();
-        jComboBox7 = new javax.swing.JComboBox<>();
-        jLabel15 = new javax.swing.JLabel();
-        jTextSoLuongTra = new javax.swing.JTextField();
-        jLabel29 = new javax.swing.JLabel();
-        jTextNgayTra = new javax.swing.JTextField();
-        jButton10 = new javax.swing.JButton();
-        jLabel41 = new javax.swing.JLabel();
-        jTextConLai = new javax.swing.JTextField();
-        jLabel42 = new javax.swing.JLabel();
-        jTextTratiencoc = new javax.swing.JTextField();
-        jLabel43 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        jTraTam = new javax.swing.JTable();
+        jMaSach3 = new javax.swing.JLabel();
+        selectMaSach = new javax.swing.JComboBox<>();
+        jSoLuongTra = new javax.swing.JLabel();
+        inputSoLuongTra = new javax.swing.JTextField();
+        jNgayTra = new javax.swing.JLabel();
+        inputNgayTra = new javax.swing.JTextField();
+        jTraSach = new javax.swing.JButton();
+        jSoLuong = new javax.swing.JLabel();
+        jConLai = new javax.swing.JTextField();
+        jThanhToan = new javax.swing.JLabel();
+        jTratiencoc = new javax.swing.JTextField();
+        jNo = new javax.swing.JLabel();
+        inputNo = new javax.swing.JTextField();
         JPtimSach = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
+        jTenSach3 = new javax.swing.JLabel();
         timTenSach = new javax.swing.JTextField();
-        jLabel17 = new javax.swing.JLabel();
+        jMaSach4 = new javax.swing.JLabel();
         timMaSach = new javax.swing.JTextField();
-        jLabel18 = new javax.swing.JLabel();
+        jNgonNgu2 = new javax.swing.JLabel();
         timNgonNgu = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
+        jTacGia3 = new javax.swing.JLabel();
         timTacGia = new javax.swing.JTextField();
-        jLabel20 = new javax.swing.JLabel();
+        jMonLoai2 = new javax.swing.JLabel();
         timMonLoai = new javax.swing.JTextField();
-        jLabel21 = new javax.swing.JLabel();
+        jNhaXuatBan = new javax.swing.JLabel();
         timNXB = new javax.swing.JTextField();
-        jLabel22 = new javax.swing.JLabel();
+        jMaKho2 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         timKiemSach = new javax.swing.JButton();
         huyTimSach = new javax.swing.JButton();
@@ -215,39 +215,39 @@ public class MainForm extends javax.swing.JFrame {
         JPthongTin = new javax.swing.JPanel();
         jScrollPane10 = new javax.swing.JScrollPane();
         dsTKDocGia = new javax.swing.JTable();
-        jLabel23 = new javax.swing.JLabel();
+        jHoTen3 = new javax.swing.JLabel();
         timHoTen = new javax.swing.JTextField();
-        jLabel24 = new javax.swing.JLabel();
+        jCMND = new javax.swing.JLabel();
         timCMND = new javax.swing.JTextField();
-        jLabel25 = new javax.swing.JLabel();
+        jGioiTinh = new javax.swing.JLabel();
         timGioiTinh = new javax.swing.JComboBox<>();
-        jLabel26 = new javax.swing.JLabel();
+        jDiaChi = new javax.swing.JLabel();
         timDiaChi = new javax.swing.JTextField();
-        jLabel27 = new javax.swing.JLabel();
+        jCongViec = new javax.swing.JLabel();
         timCongViec = new javax.swing.JTextField();
-        jLabel28 = new javax.swing.JLabel();
+        jSDT2 = new javax.swing.JLabel();
         timDT = new javax.swing.JTextField();
         timkiem = new javax.swing.JButton();
         jSeparator5 = new javax.swing.JSeparator();
         huyTimKiem = new javax.swing.JButton();
         JPtkSach = new javax.swing.JPanel();
-        jLabel31 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jThongKe = new javax.swing.JLabel();
+        selectTinhTrang = new javax.swing.JComboBox<>();
         buttomThongke = new javax.swing.JButton();
         buttomXuatFile = new javax.swing.JButton();
         jScrollPane11 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jThongKeSach = new javax.swing.JTable();
         jButton6 = new javax.swing.JButton();
         JPtkDocGia = new javax.swing.JPanel();
-        jLabel33 = new javax.swing.JLabel();
-        jComboBox5 = new javax.swing.JComboBox<>();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        jThongKe2 = new javax.swing.JLabel();
+        inputTinhTrang2 = new javax.swing.JComboBox<>();
+        jbuttomThongKe = new javax.swing.JButton();
+        jXuatFile = new javax.swing.JButton();
         jScrollPane12 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
-        jButton9 = new javax.swing.JButton();
-        jLabel32 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        jThongKeDocGia = new javax.swing.JTable();
+        jThoat2 = new javax.swing.JButton();
+        jQuaHan = new javax.swing.JLabel();
+        inputTinhTrangQuaHan = new javax.swing.JComboBox<>();
         menu = new javax.swing.JMenuBar();
         Update = new javax.swing.JMenu();
         capNhatKho = new javax.swing.JMenu();
@@ -284,18 +284,18 @@ public class MainForm extends javax.swing.JFrame {
                 HomeMouseClicked(evt);
             }
         });
-
         Home.setLayout(null);
-        HomeImage.setIcon(new ImageIcon("src\\main\\java\\image\\FileHome.jpg"));
-        HomeImage.setBounds(0, 0, 800, 510);
+        HomeImage.setIcon(new ImageIcon("src\\main\\java\\image\\FileHome.jpg")); // NOI18N
         Home.add(HomeImage);
+        HomeImage.setBounds(0, 0, 800, 510);
+
         cardLayout.add(Home, "card10");
 
         JPthemSach.setBackground(new java.awt.Color(214, 217, 223));
         JPthemSach.setPreferredSize(new java.awt.Dimension(800, 510));
 
-        tensach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        tensach.setText("Tên sách:");
+        jTenSach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTenSach.setText("Tên sách:");
 
         inputTenSach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         inputTenSach.addActionListener(new java.awt.event.ActionListener() {
@@ -304,8 +304,8 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        masach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        masach.setText("Mã sách:");
+        jMaSach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMaSach.setText("Mã sách:");
 
         inputMaSach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         inputMaSach.addActionListener(new java.awt.event.ActionListener() {
@@ -314,8 +314,8 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel3.setText("Mã kho:");
+        jMaKho.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMaKho.setText("Mã kho:");
 
         inputSoLuong.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         inputSoLuong.addActionListener(new java.awt.event.ActionListener() {
@@ -324,8 +324,8 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel4.setText("Tác giả:");
+        jTacGia.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTacGia.setText("Tác giả:");
 
         inputTacGia.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         inputTacGia.addActionListener(new java.awt.event.ActionListener() {
@@ -334,8 +334,8 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        maNXB.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        maNXB.setText("Mã NXB");
+        jMaNXB.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMaNXB.setText("Mã NXB");
 
         inputMaNXB.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         inputMaNXB.addActionListener(new java.awt.event.ActionListener() {
@@ -344,8 +344,8 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        monLoai.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        monLoai.setText("Môn loại");
+        jMonLoai.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMonLoai.setText("Môn loại");
 
         inputMonLoai.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         inputMonLoai.addActionListener(new java.awt.event.ActionListener() {
@@ -426,23 +426,23 @@ public class MainForm extends javax.swing.JFrame {
                         .add(JPthemSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(JPthemSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                                 .add(JPthemSachLayout.createSequentialGroup()
-                                    .add(tensach)
+                                    .add(jTenSach)
                                     .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                                     .add(inputTenSach, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 274, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                     .add(18, 18, 18)
-                                    .add(masach)
+                                    .add(jMaSach)
                                     .add(18, 18, 18)
                                     .add(inputMaSach, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 122, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                 .add(JPthemSachLayout.createSequentialGroup()
-                                    .add(maNXB)
+                                    .add(jMaNXB)
                                     .add(18, 18, 18)
                                     .add(inputMaNXB, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 187, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                     .add(18, 18, 18)
-                                    .add(jLabel3)
+                                    .add(jMaKho)
                                     .add(18, 18, 18)
                                     .add(inputMaKho)))
                             .add(JPthemSachLayout.createSequentialGroup()
-                                .add(monLoai)
+                                .add(jMonLoai)
                                 .add(18, 18, 18)
                                 .add(inputMonLoai, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 110, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(18, 18, 18)
@@ -454,7 +454,7 @@ public class MainForm extends javax.swing.JFrame {
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                                 .add(inputGia, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 115, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                             .add(JPthemSachLayout.createSequentialGroup()
-                                .add(jLabel4)
+                                .add(jTacGia)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                                 .add(inputTacGia, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 287, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(18, 18, 18)
@@ -472,28 +472,28 @@ public class MainForm extends javax.swing.JFrame {
             .add(JPthemSachLayout.createSequentialGroup()
                 .add(11, 11, 11)
                 .add(JPthemSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(tensach)
+                    .add(jTenSach)
                     .add(inputTenSach, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(masach)
+                    .add(jMaSach)
                     .add(inputMaSach, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(18, 18, 18)
                 .add(JPthemSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(maNXB)
+                    .add(jMaNXB)
                     .add(JPthemSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                         .add(luu)
                         .add(inputMaNXB, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(jLabel3)
+                        .add(jMaKho)
                         .add(inputMaKho, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .add(18, 18, 18)
                 .add(JPthemSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel4)
+                    .add(jTacGia)
                     .add(inputTacGia, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(soLuong)
                     .add(inputSoLuong, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(thoat))
                 .add(20, 20, 20)
                 .add(JPthemSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(monLoai)
+                    .add(jMonLoai)
                     .add(inputMonLoai, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(ngonNgu)
                     .add(inputNgonNgu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -656,8 +656,8 @@ public class MainForm extends javax.swing.JFrame {
         logThemDG.setRows(5);
         jScrollPane3.setViewportView(logThemDG);
 
-        jLabel34.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel34.setText("Số điện thoại");
+        jSDT.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jSDT.setText("Số điện thoại");
 
         inputSDT.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         inputSDT.addActionListener(new java.awt.event.ActionListener() {
@@ -714,7 +714,7 @@ public class MainForm extends javax.swing.JFrame {
                                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                                         .add(inputDiaChi))
                                     .add(JPthemDGLayout.createSequentialGroup()
-                                        .add(jLabel34)
+                                        .add(jSDT)
                                         .add(18, 18, 18)
                                         .add(inputSDT)))))
                         .add(44, 44, 44)
@@ -761,7 +761,7 @@ public class MainForm extends javax.swing.JFrame {
                 .add(JPthemDGLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(hanDung)
                     .add(inputHanDung, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel34)
+                    .add(jSDT)
                     .add(inputSDT, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jSeparator2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
@@ -775,8 +775,8 @@ public class MainForm extends javax.swing.JFrame {
         JPxoaDG.setBackground(new java.awt.Color(214, 217, 223));
         JPxoaDG.setPreferredSize(new java.awt.Dimension(800, 488));
 
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel2.setText("Danh sách độc giả:");
+        jDanhSachDocGia.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jDanhSachDocGia.setText("Danh sách độc giả:");
 
         dsDocGia.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -788,9 +788,9 @@ public class MainForm extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(dsDocGia);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane5.setViewportView(jTextArea1);
+        jLogXoaDocGia.setColumns(20);
+        jLogXoaDocGia.setRows(5);
+        jScrollPane5.setViewportView(jLogXoaDocGia);
 
         buttomXoaDG.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         buttomXoaDG.setText("Xoá độc giả");
@@ -818,7 +818,7 @@ public class MainForm extends javax.swing.JFrame {
                     .add(jScrollPane4)
                     .add(JPxoaDGLayout.createSequentialGroup()
                         .add(JPxoaDGLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                            .add(jLabel2)
+                            .add(jDanhSachDocGia)
                             .add(JPxoaDGLayout.createSequentialGroup()
                                 .add(jScrollPane5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 507, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(26, 26, 26)
@@ -832,7 +832,7 @@ public class MainForm extends javax.swing.JFrame {
             JPxoaDGLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(JPxoaDGLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jLabel2)
+                .add(jDanhSachDocGia)
                 .add(JPxoaDGLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(JPxoaDGLayout.createSequentialGroup()
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
@@ -853,8 +853,8 @@ public class MainForm extends javax.swing.JFrame {
         JPdsSach.setBackground(new java.awt.Color(214, 217, 223));
         JPdsSach.setPreferredSize(new java.awt.Dimension(800, 488));
 
-        jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel5.setText("Thống kê toàn bộ sách:");
+        jLabelDanhSachSach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabelDanhSachSach.setText("Thống kê toàn bộ sách:");
 
         thoatDanhSachSach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         thoatDanhSachSach.setText("Thoát");
@@ -882,7 +882,7 @@ public class MainForm extends javax.swing.JFrame {
                 .addContainerGap()
                 .add(JPdsSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(JPdsSachLayout.createSequentialGroup()
-                        .add(jLabel5)
+                        .add(jLabelDanhSachSach)
                         .add(0, 0, Short.MAX_VALUE))
                     .add(jScrollPane6, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE))
                 .addContainerGap())
@@ -895,7 +895,7 @@ public class MainForm extends javax.swing.JFrame {
             JPdsSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(JPdsSachLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jLabel5)
+                .add(jLabelDanhSachSach)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jScrollPane6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 393, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -908,8 +908,8 @@ public class MainForm extends javax.swing.JFrame {
         JPdsDocGia.setBackground(new java.awt.Color(214, 217, 223));
         JPdsDocGia.setPreferredSize(new java.awt.Dimension(800, 488));
 
-        jLabel6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel6.setText("Thống kê độc giả:");
+        jDocGia.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jDocGia.setText("Thống kê độc giả:");
 
         thoatDanhSachDG.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         thoatDanhSachDG.setText("Thoát");
@@ -940,7 +940,7 @@ public class MainForm extends javax.swing.JFrame {
                         .add(jScrollPane7)
                         .addContainerGap())
                     .add(JPdsDocGiaLayout.createSequentialGroup()
-                        .add(jLabel6)
+                        .add(jDocGia)
                         .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, JPdsDocGiaLayout.createSequentialGroup()
                         .add(0, 661, Short.MAX_VALUE)
@@ -951,7 +951,7 @@ public class MainForm extends javax.swing.JFrame {
             JPdsDocGiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(JPdsDocGiaLayout.createSequentialGroup()
                 .addContainerGap()
-                .add(jLabel6)
+                .add(jDocGia)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jScrollPane7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 409, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(18, 18, 18)
@@ -964,13 +964,13 @@ public class MainForm extends javax.swing.JFrame {
         JPdkMuon.setBackground(new java.awt.Color(214, 217, 223));
         JPdkMuon.setPreferredSize(new java.awt.Dimension(800, 488));
 
-        jLabel7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel7.setText("Mã số thẻ:");
+        jMaSoThe.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMaSoThe.setText("Mã số thẻ:");
 
-        jLabel8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel8.setText("Mã thủ thư:");
+        jMaThuThu.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMaThuThu.setText("Mã thủ thư:");
 
-        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+        jHoaDonTam.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -978,7 +978,7 @@ public class MainForm extends javax.swing.JFrame {
                 "Mã sách", "Tên sách", "Tác giả", "Số lượng", "Ngày mượn", "Dự kiến trả"
             }
         ));
-        jScrollPane8.setViewportView(jTable5);
+        jScrollPane8.setViewportView(jHoaDonTam);
 
         themSachM.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         themSachM.setText("Thêm sách");
@@ -996,14 +996,14 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel12.setText("Tổng sách mượn");
+        jTongSach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTongSach.setText("Tổng sách mượn");
 
         tongSachMuon.setEditable(false);
         tongSachMuon.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel11.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel11.setText("Tiền cọc");
+        jTienCoc.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTienCoc.setText("Tiền cọc");
 
         coc.setEditable(false);
         coc.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -1021,61 +1021,61 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel35.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel35.setText("Mã sách");
+        jMaSach2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMaSach2.setText("Mã sách");
 
         inputMaSachMuon.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel36.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel36.setText("Số lượng");
+        jSoLuong2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jSoLuong2.setText("Số lượng");
 
         inputSoLuongMuon.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         jTextField1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        jLabel9.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel9.setText("Tên thủ thư");
+        jTenThuThu.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTenThuThu.setText("Tên thủ thư");
 
         jTextField2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
 
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        jChonMaThe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                jChonMaTheActionPerformed(evt);
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel10.setText("Độc giả");
+        jTenDocGia.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTenDocGia.setText("Độc giả");
 
-        jTextField3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        showTenDocGia.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel37.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel37.setText("Ngày mượn");
+        jNgayMuon.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jNgayMuon.setText("Ngày mượn");
 
-        jTextField4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        inputNgayMuon.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel38.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel38.setText("Dự kiến trả");
+        jDuKienTra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jDuKienTra.setText("Dự kiến trả");
 
-        jTextField5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        inputDuKien.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jButton3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton3.setText("Xuất hoá đơn");
+        jXuatHoaDon.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jXuatHoaDon.setText("Xuất hoá đơn");
 
-        jButton11.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton11.setText("Lưu");
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        jLuu.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLuu.setText("Lưu");
+        jLuu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 try {
-                    jButton11ActionPerformed(evt);
+                    jLuuActionPerformed(evt);
                 } catch (SQLException throwables) {
                     throwables.printStackTrace();
                 }
             }
         });
 
-        jLabel40.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel40.setText("Mã đơn mượn:");
+        jThoat.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jThoat.setText("Mã đơn mượn:");
 
         nhapMaDon.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
@@ -1091,11 +1091,11 @@ public class MainForm extends javax.swing.JFrame {
                         .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(jScrollPane8, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
                             .add(JPdkMuonLayout.createSequentialGroup()
-                                .add(jLabel12)
+                                .add(jTongSach)
                                 .add(18, 18, 18)
                                 .add(tongSachMuon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 100, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(27, 27, 27)
-                                .add(jLabel11)
+                                .add(jTienCoc)
                                 .add(18, 18, 18)
                                 .add(coc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 180, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(0, 0, Short.MAX_VALUE)))
@@ -1103,16 +1103,16 @@ public class MainForm extends javax.swing.JFrame {
                         .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, JPdkMuonLayout.createSequentialGroup()
                                 .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
-                                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jTextField5)
-                                    .add(jLabel38)
-                                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jTextField4)
-                                    .add(jLabel37)
+                                    .add(org.jdesktop.layout.GroupLayout.TRAILING, inputDuKien)
+                                    .add(jDuKienTra)
+                                    .add(org.jdesktop.layout.GroupLayout.TRAILING, inputNgayMuon)
+                                    .add(jNgayMuon)
                                     .add(org.jdesktop.layout.GroupLayout.TRAILING, JPdkMuonLayout.createSequentialGroup()
-                                        .add(jLabel35)
+                                        .add(jMaSach2)
                                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .add(inputMaSachMuon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 85, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                     .add(org.jdesktop.layout.GroupLayout.TRAILING, JPdkMuonLayout.createSequentialGroup()
-                                        .add(jLabel36)
+                                        .add(jSoLuong2)
                                         .add(18, 18, 18)
                                         .add(inputSoLuongMuon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 85, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                                 .addContainerGap())
@@ -1124,33 +1124,33 @@ public class MainForm extends javax.swing.JFrame {
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, JPdkMuonLayout.createSequentialGroup()
                         .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(JPdkMuonLayout.createSequentialGroup()
-                                .add(jLabel8)
+                                .add(jMaThuThu)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                                 .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 90, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(30, 30, 30)
-                                .add(jLabel9))
+                                .add(jTenThuThu))
                             .add(JPdkMuonLayout.createSequentialGroup()
-                                .add(jLabel7)
+                                .add(jMaSoThe)
                                 .add(18, 18, 18)
-                                .add(jComboBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 135, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                                .add(jChonMaThe, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 135, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(JPdkMuonLayout.createSequentialGroup()
                                 .add(jTextField2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 221, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(18, 18, 18)
-                                .add(jLabel40)
+                                .add(jThoat)
                                 .add(18, 18, 18)
                                 .add(nhapMaDon))
                             .add(JPdkMuonLayout.createSequentialGroup()
-                                .add(jLabel10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 75, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(jTenDocGia, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 75, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jTextField3)))
+                                .add(showTenDocGia)))
                         .addContainerGap())))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, JPdkMuonLayout.createSequentialGroup()
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jButton3)
+                .add(jXuatHoaDon)
                 .add(18, 18, 18)
-                .add(jButton11, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jLuu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(17, 17, 17)
                 .add(huyMuon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(23, 23, 23))
@@ -1162,38 +1162,38 @@ public class MainForm extends javax.swing.JFrame {
                 .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(JPdkMuonLayout.createSequentialGroup()
                         .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jLabel8)
+                            .add(jMaThuThu)
                             .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabel9)
+                            .add(jTenThuThu)
                             .add(jTextField2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabel40)
+                            .add(jThoat)
                             .add(nhapMaDon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(25, 25, 25)
                         .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jLabel7)
-                            .add(jComboBox1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabel10)
-                            .add(jTextField3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(jMaSoThe)
+                            .add(jChonMaThe, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                            .add(jTenDocGia)
+                            .add(showTenDocGia, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(jSeparator3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                         .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(JPdkMuonLayout.createSequentialGroup()
                                 .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                                    .add(jLabel35)
+                                    .add(jMaSach2)
                                     .add(inputMaSachMuon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                 .add(18, 18, 18)
                                 .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                                    .add(jLabel36)
+                                    .add(jSoLuong2)
                                     .add(inputSoLuongMuon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                                 .add(18, 18, 18)
-                                .add(jLabel37)
+                                .add(jNgayMuon)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                                .add(jTextField4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(inputNgayMuon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(18, 18, 18)
-                                .add(jLabel38)
+                                .add(jDuKienTra)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jTextField5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(inputDuKien, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(18, 18, 18)
                                 .add(themSachM))
                             .add(jScrollPane8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 257, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
@@ -1202,15 +1202,15 @@ public class MainForm extends javax.swing.JFrame {
                         .add(46, 46, 46))
                     .add(org.jdesktop.layout.GroupLayout.TRAILING, JPdkMuonLayout.createSequentialGroup()
                         .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jLabel12)
+                            .add(jTongSach)
                             .add(tongSachMuon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabel11)
+                            .add(jTienCoc)
                             .add(coc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(18, 18, 18)))
                 .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jButton3)
+                    .add(jXuatHoaDon)
                     .add(huyMuon)
-                    .add(jButton11))
+                    .add(jLuu))
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -1219,8 +1219,8 @@ public class MainForm extends javax.swing.JFrame {
         JPdktraSach.setBackground(new java.awt.Color(214, 217, 223));
         JPdktraSach.setPreferredSize(new java.awt.Dimension(800, 488));
 
-        jLabel13.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel13.setText("Mã đơn mượn:");
+        jMaDonMuon.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMaDonMuon.setText("Mã đơn mượn:");
 
         thoatTra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         thoatTra.setText("Thoát");
@@ -1238,19 +1238,19 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+        selectMaDon.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
+                selectMaDonActionPerformed(evt);
             }
         });
 
-        jLabel30.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel30.setText("Tên độc giả");
+        jTenDocGia2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTenDocGia2.setText("Tên độc giả");
 
-        jTextField8.setEditable(false);
-        jTextField8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        showTenDocGIa.setEditable(false);
+        showTenDocGIa.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        jTraTam.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -1261,50 +1261,50 @@ public class MainForm extends javax.swing.JFrame {
                 "Mã Sách", "Tên sách", "Số lượng trả", "Ngày trả", "Quá hạn"
             }
         ));
-        jScrollPane13.setViewportView(jTable3);
+        jScrollPane13.setViewportView(jTraTam);
 
-        jLabel14.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel14.setText("Mã sách:");
+        jMaSach3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMaSach3.setText("Mã sách:");
 
-        jComboBox7.addActionListener(new java.awt.event.ActionListener() {
+        selectMaSach.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox7ActionPerformed(evt);
+                selectMaSachActionPerformed(evt);
             }
         });
 
-        jLabel15.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel15.setText("Số lượng trả:");
+        jSoLuongTra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jSoLuongTra.setText("Số lượng trả:");
 
-        jTextSoLuongTra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        inputSoLuongTra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel29.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel29.setText("Ngày trả:");
+        jNgayTra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jNgayTra.setText("Ngày trả:");
 
-        jTextNgayTra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        inputNgayTra.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jButton10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton10.setText("Trả sách");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        jTraSach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTraSach.setText("Trả sách");
+        jTraSach.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                jTraSachActionPerformed(evt);
             }
         });
 
-        jLabel41.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel41.setText("Số lượng:");
+        jSoLuong.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jSoLuong.setText("Số lượng:");
 
-        jTextConLai.setEditable(false);
-        jTextConLai.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jConLai.setEditable(false);
+        jConLai.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel42.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel42.setText("Thanh toán:");
+        jThanhToan.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jThanhToan.setText("Thanh toán:");
 
-        jTextTratiencoc.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTratiencoc.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel43.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel43.setText("Nợ:");
+        jNo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jNo.setText("Nợ:");
 
-        jTextField6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        inputNo.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         org.jdesktop.layout.GroupLayout JPdktraSachLayout = new org.jdesktop.layout.GroupLayout(JPdktraSach);
         JPdktraSach.setLayout(JPdktraSachLayout);
@@ -1316,13 +1316,13 @@ public class MainForm extends javax.swing.JFrame {
                     .add(JPdktraSachLayout.createSequentialGroup()
                         .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                             .add(org.jdesktop.layout.GroupLayout.LEADING, JPdktraSachLayout.createSequentialGroup()
-                                .add(jLabel13)
+                                .add(jMaDonMuon)
                                 .add(18, 18, 18)
-                                .add(jComboBox2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(selectMaDon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 108, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(33, 33, 33)
-                                .add(jLabel30)
+                                .add(jTenDocGia2)
                                 .add(18, 18, 18)
-                                .add(jTextField8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 257, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(showTenDocGIa, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 257, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 32, Short.MAX_VALUE))
                             .add(org.jdesktop.layout.GroupLayout.LEADING, JPdktraSachLayout.createSequentialGroup()
                                 .add(0, 0, Short.MAX_VALUE)
@@ -1334,31 +1334,31 @@ public class MainForm extends javax.swing.JFrame {
                         .add(18, 18, 18)
                         .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                             .add(JPdktraSachLayout.createSequentialGroup()
-                                .add(jLabel14)
+                                .add(jMaSach3)
                                 .add(18, 18, 18)
-                                .add(jComboBox7, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .add(jTextNgayTra)
+                                .add(selectMaSach, 0, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .add(inputNgayTra)
                             .add(org.jdesktop.layout.GroupLayout.TRAILING, JPdktraSachLayout.createSequentialGroup()
                                 .add(0, 0, Short.MAX_VALUE)
-                                .add(jButton10))
+                                .add(jTraSach))
                             .add(JPdktraSachLayout.createSequentialGroup()
-                                .add(jLabel15)
+                                .add(jSoLuongTra)
                                 .add(18, 18, 18)
-                                .add(jTextSoLuongTra))
+                                .add(inputSoLuongTra))
                             .add(JPdktraSachLayout.createSequentialGroup()
-                                .add(jLabel41)
+                                .add(jSoLuong)
                                 .add(39, 39, 39)
-                                .add(jTextConLai))
-                            .add(jTextTratiencoc)
+                                .add(jConLai))
+                            .add(jTratiencoc)
                             .add(JPdktraSachLayout.createSequentialGroup()
                                 .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                                    .add(jLabel29)
-                                    .add(jLabel42))
+                                    .add(jNgayTra)
+                                    .add(jThanhToan))
                                 .add(0, 0, Short.MAX_VALUE))
                             .add(JPdktraSachLayout.createSequentialGroup()
-                                .add(jLabel43, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                                .add(jNo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 40, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                                .add(jTextField6)))))
+                                .add(inputNo)))))
                 .add(44, 44, 44))
         );
         JPdktraSachLayout.setVerticalGroup(
@@ -1366,39 +1366,39 @@ public class MainForm extends javax.swing.JFrame {
             .add(JPdktraSachLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel13)
-                    .add(jComboBox2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel30)
-                    .add(jTextField8, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jMaDonMuon)
+                    .add(selectMaDon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jTenDocGia2)
+                    .add(showTenDocGIa, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(32, 32, 32)
                 .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                     .add(jScrollPane13, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 358, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(JPdktraSachLayout.createSequentialGroup()
                         .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jLabel14)
-                            .add(jComboBox7, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(jMaSach3)
+                            .add(selectMaSach, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(18, 18, 18)
                         .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jLabel41)
-                            .add(jTextConLai, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(jSoLuong)
+                            .add(jConLai, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(18, 18, 18)
                         .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jLabel15)
-                            .add(jTextSoLuongTra, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(jSoLuongTra)
+                            .add(inputSoLuongTra, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jLabel29)
+                        .add(jNgayTra)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jTextNgayTra, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(inputNgayTra, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jLabel42)
+                        .add(jThanhToan)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                        .add(jTextTratiencoc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(jTratiencoc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(18, 18, 18)
                         .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
-                            .add(jLabel43)
-                            .add(jTextField6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                            .add(jNo)
+                            .add(inputNo, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(18, 18, 18)
-                        .add(jButton10)
+                        .add(jTraSach)
                         .add(35, 35, 35)))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 18, Short.MAX_VALUE)
                 .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
@@ -1412,38 +1412,38 @@ public class MainForm extends javax.swing.JFrame {
         JPtimSach.setBackground(new java.awt.Color(214, 217, 223));
         JPtimSach.setPreferredSize(new java.awt.Dimension(800, 488));
 
-        jLabel16.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel16.setText("Tên sách");
+        jTenSach3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTenSach3.setText("Tên sách");
 
         timTenSach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel17.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel17.setText("Mã sách:");
+        jMaSach4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMaSach4.setText("Mã sách:");
 
         timMaSach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel18.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel18.setText("Ngôn ngữ");
+        jNgonNgu2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jNgonNgu2.setText("Ngôn ngữ");
 
         timNgonNgu.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel19.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel19.setText("Tác giả:");
+        jTacGia3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jTacGia3.setText("Tác giả:");
 
         timTacGia.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel20.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel20.setText("Môn loại");
+        jMonLoai2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMonLoai2.setText("Môn loại");
 
         timMonLoai.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel21.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel21.setText("Nhà xuất bản:");
+        jNhaXuatBan.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jNhaXuatBan.setText("Nhà xuất bản:");
 
         timNXB.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel22.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel22.setText("Mã kho:");
+        jMaKho2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jMaKho2.setText("Mã kho:");
 
         timKiemSach.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         timKiemSach.setText("Tìm kiếm");
@@ -1496,35 +1496,35 @@ public class MainForm extends javax.swing.JFrame {
                         .add(jScrollPane9)
                         .addContainerGap())
                     .add(JPtimSachLayout.createSequentialGroup()
-                        .add(jLabel21)
+                        .add(jNhaXuatBan)
                         .add(18, 18, 18)
                         .add(timNXB, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 194, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(18, 18, 18)
-                        .add(jLabel22)
+                        .add(jMaKho2)
                         .add(18, 18, 18)
                         .add(timMaKho, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 130, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .add(JPtimSachLayout.createSequentialGroup()
                         .add(JPtimSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                             .add(JPtimSachLayout.createSequentialGroup()
-                                .add(jLabel18)
+                                .add(jNgonNgu2)
                                 .add(18, 18, 18)
                                 .add(timNgonNgu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 160, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(18, 18, 18)
-                                .add(jLabel19)
+                                .add(jTacGia3)
                                 .add(18, 18, 18)
                                 .add(timTacGia))
                             .add(JPtimSachLayout.createSequentialGroup()
-                                .add(jLabel16)
+                                .add(jTenSach3)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                                 .add(timTenSach, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 300, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(18, 18, 18)
-                                .add(jLabel17)))
+                                .add(jMaSach4)))
                         .add(18, 18, 18)
                         .add(JPtimSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                             .add(timMaSach, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 180, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                             .add(JPtimSachLayout.createSequentialGroup()
-                                .add(jLabel20)
+                                .add(jMonLoai2)
                                 .add(18, 18, 18)
                                 .add(timMonLoai)))
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 32, Short.MAX_VALUE)
@@ -1538,30 +1538,30 @@ public class MainForm extends javax.swing.JFrame {
             .add(JPtimSachLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(JPtimSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel16)
+                    .add(jTenSach3)
                     .add(timTenSach, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel17)
+                    .add(jMaSach4)
                     .add(timMaSach, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(timKiemSach))
                 .add(18, 18, 18)
                 .add(JPtimSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel18)
+                    .add(jNgonNgu2)
                     .add(timNgonNgu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel19)
+                    .add(jTacGia3)
                     .add(timTacGia, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel20)
+                    .add(jMonLoai2)
                     .add(timMonLoai, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(huyTimSach))
                 .add(18, 18, 18)
                 .add(JPtimSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel21)
+                    .add(jNhaXuatBan)
                     .add(timNXB, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel22)
+                    .add(jMaKho2)
                     .add(timMaKho, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jSeparator4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE)
+                .add(jScrollPane9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1580,13 +1580,13 @@ public class MainForm extends javax.swing.JFrame {
         ));
         jScrollPane10.setViewportView(dsTKDocGia);
 
-        jLabel23.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel23.setText("Họ tên:");
+        jHoTen3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jHoTen3.setText("Họ tên:");
 
         timHoTen.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel24.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel24.setText("CMND");
+        jCMND.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jCMND.setText("CMND");
 
         timCMND.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         timCMND.addActionListener(new java.awt.event.ActionListener() {
@@ -1595,24 +1595,24 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel25.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel25.setText("Giới tính:");
+        jGioiTinh.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jGioiTinh.setText("Giới tính:");
 
         timGioiTinh.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         timGioiTinh.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nam", "Nữ", "Khác" }));
 
-        jLabel26.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel26.setText("Địa chỉ:");
+        jDiaChi.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jDiaChi.setText("Địa chỉ:");
 
         timDiaChi.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel27.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel27.setText("Công việc:");
+        jCongViec.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jCongViec.setText("Công việc:");
 
         timCongViec.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
-        jLabel28.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel28.setText("Số điện thoại:");
+        jSDT2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jSDT2.setText("Số điện thoại:");
 
         timDT.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         timDT.addActionListener(new java.awt.event.ActionListener() {
@@ -1648,27 +1648,27 @@ public class MainForm extends javax.swing.JFrame {
                     .add(JPthongTinLayout.createSequentialGroup()
                         .add(JPthongTinLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING, false)
                             .add(JPthongTinLayout.createSequentialGroup()
-                                .add(jLabel23)
+                                .add(jHoTen3)
                                 .add(18, 18, 18)
                                 .add(timHoTen, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 282, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(18, 18, 18)
-                                .add(jLabel24)
+                                .add(jCMND)
                                 .add(18, 18, 18)
                                 .add(timCMND, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 190, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                             .add(JPthongTinLayout.createSequentialGroup()
-                                .add(jLabel25)
+                                .add(jGioiTinh)
                                 .add(18, 18, 18)
                                 .add(timGioiTinh, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(18, 18, 18)
-                                .add(jLabel26)
+                                .add(jDiaChi)
                                 .add(18, 18, 18)
                                 .add(timDiaChi))
                             .add(JPthongTinLayout.createSequentialGroup()
-                                .add(jLabel27)
+                                .add(jCongViec)
                                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                                 .add(timCongViec, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 150, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                                 .add(18, 18, 18)
-                                .add(jLabel28)
+                                .add(jSDT2)
                                 .add(18, 18, 18)
                                 .add(timDT)))
                         .add(46, 46, 46)
@@ -1686,24 +1686,24 @@ public class MainForm extends javax.swing.JFrame {
                     .add(JPthongTinLayout.createSequentialGroup()
                         .addContainerGap()
                         .add(JPthongTinLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                            .add(jLabel23)
+                            .add(jHoTen3)
                             .add(timHoTen, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                            .add(jLabel24)
+                            .add(jCMND)
                             .add(timCMND, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                     .add(JPthongTinLayout.createSequentialGroup()
                         .add(20, 20, 20)
                         .add(timkiem)))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(JPthongTinLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel25)
+                    .add(jGioiTinh)
                     .add(timGioiTinh, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel26)
+                    .add(jDiaChi)
                     .add(timDiaChi, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .add(18, 18, 18)
                 .add(JPthongTinLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel27)
+                    .add(jCongViec)
                     .add(timCongViec, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jLabel28)
+                    .add(jSDT2)
                     .add(timDT, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(huyTimKiem))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
@@ -1717,11 +1717,11 @@ public class MainForm extends javax.swing.JFrame {
 
         JPtkSach.setPreferredSize(new java.awt.Dimension(800, 488));
 
-        jLabel31.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel31.setText("Thống kê:");
+        jThongKe.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jThongKe.setText("Thống kê:");
 
-        jComboBox3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sách còn trong kho", "Sách đã cho mượn" }));
+        selectTinhTrang.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        selectTinhTrang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sách còn trong kho", "Sách đã cho mượn" }));
 
         buttomThongke.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         buttomThongke.setText("Thống kê");
@@ -1734,7 +1734,7 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jThongKeSach.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -1745,7 +1745,7 @@ public class MainForm extends javax.swing.JFrame {
                 "Mã sách", "Tên sách", "Tác giả", "Nhà xuất bản", "Số lượng", "Kho"
             }
         ));
-        jScrollPane11.setViewportView(jTable1);
+        jScrollPane11.setViewportView(jThongKeSach);
 
         jButton6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton6.setText("Thoát");
@@ -1764,9 +1764,9 @@ public class MainForm extends javax.swing.JFrame {
                 .add(JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jScrollPane11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
                     .add(JPtkSachLayout.createSequentialGroup()
-                        .add(jLabel31)
+                        .add(jThongKe)
                         .add(18, 18, 18)
-                        .add(jComboBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(selectTinhTrang, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(269, 269, 269)
                         .add(buttomXuatFile)
                         .add(41, 41, 41)
@@ -1783,12 +1783,12 @@ public class MainForm extends javax.swing.JFrame {
             .add(JPtkSachLayout.createSequentialGroup()
                 .addContainerGap()
                 .add(JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel31)
-                    .add(jComboBox3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jThongKe)
+                    .add(selectTinhTrang, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                     .add(buttomThongke)
                     .add(buttomXuatFile))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 416, Short.MAX_VALUE)
+                .add(jScrollPane11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jButton6)
                 .addContainerGap())
@@ -1798,29 +1798,29 @@ public class MainForm extends javax.swing.JFrame {
 
         JPtkDocGia.setPreferredSize(new java.awt.Dimension(800, 488));
 
-        jLabel33.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel33.setText("Thống kê:");
+        jThongKe2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jThongKe2.setText("Thống kê:");
 
-        jComboBox5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Có mượn", "Chưa mượn" }));
-        jComboBox5.addActionListener(new java.awt.event.ActionListener() {
+        inputTinhTrang2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        inputTinhTrang2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Có mượn", "Chưa mượn" }));
+        inputTinhTrang2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox5ActionPerformed(evt);
+                inputTinhTrang2ActionPerformed(evt);
             }
         });
 
-        jButton7.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton7.setText("Thống kê");
+        jbuttomThongKe.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jbuttomThongKe.setText("Thống kê");
 
-        jButton8.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton8.setText("Xuất file");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        jXuatFile.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jXuatFile.setText("Xuất file");
+        jXuatFile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                jXuatFileActionPerformed(evt);
             }
         });
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        jThongKeDocGia.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null, null},
@@ -1831,21 +1831,21 @@ public class MainForm extends javax.swing.JFrame {
                 "Mã độc giả", "Họ tên", "Giới tính", "CMND", "Ngày sinh", "SĐT", "Đơn phạt", "Tiền phạt"
             }
         ));
-        jScrollPane12.setViewportView(jTable2);
+        jScrollPane12.setViewportView(jThongKeDocGia);
 
-        jButton9.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton9.setText("Thoát");
-        jButton9.addMouseListener(new java.awt.event.MouseAdapter() {
+        jThoat2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jThoat2.setText("Thoát");
+        jThoat2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton9MouseClicked(evt);
+                jThoat2MouseClicked(evt);
             }
         });
 
-        jLabel32.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jLabel32.setText("Quá hạn:");
+        jQuaHan.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jQuaHan.setText("Quá hạn:");
 
-        jComboBox4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Có quá hạn", "Không Quá hạn" }));
+        inputTinhTrangQuaHan.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        inputTinhTrangQuaHan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Có quá hạn", "Không Quá hạn" }));
 
         org.jdesktop.layout.GroupLayout JPtkDocGiaLayout = new org.jdesktop.layout.GroupLayout(JPtkDocGia);
         JPtkDocGia.setLayout(JPtkDocGiaLayout);
@@ -1858,21 +1858,21 @@ public class MainForm extends javax.swing.JFrame {
                         .add(jScrollPane12)
                         .addContainerGap())
                     .add(JPtkDocGiaLayout.createSequentialGroup()
-                        .add(jLabel33)
+                        .add(jThongKe2)
                         .add(18, 18, 18)
-                        .add(jComboBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(inputTinhTrang2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .add(46, 46, 46)
-                        .add(jLabel32)
+                        .add(jQuaHan)
                         .add(18, 18, 18)
-                        .add(jComboBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 101, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(inputTinhTrangQuaHan, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 101, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 118, Short.MAX_VALUE)
-                        .add(jButton8)
+                        .add(jXuatFile)
                         .add(44, 44, 44)
-                        .add(jButton7)
+                        .add(jbuttomThongKe)
                         .add(38, 38, 38))))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, JPtkDocGiaLayout.createSequentialGroup()
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jButton9, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jThoat2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(28, 28, 28))
         );
         JPtkDocGiaLayout.setVerticalGroup(
@@ -1880,16 +1880,16 @@ public class MainForm extends javax.swing.JFrame {
             .add(JPtkDocGiaLayout.createSequentialGroup()
                 .add(19, 19, 19)
                 .add(JPtkDocGiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jLabel33)
-                    .add(jComboBox5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(jButton7)
-                    .add(jButton8)
-                    .add(jLabel32)
-                    .add(jComboBox4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
+                    .add(jThongKe2)
+                    .add(inputTinhTrang2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(jbuttomThongKe)
+                    .add(jXuatFile)
+                    .add(jQuaHan)
+                    .add(inputTinhTrangQuaHan, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jScrollPane12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
                 .add(18, 18, 18)
-                .add(jButton9)
+                .add(jThoat2)
                 .addContainerGap())
         );
 
@@ -2128,18 +2128,18 @@ public class MainForm extends javax.swing.JFrame {
             Object[] option = {"Có", "Không"};
             int n = JOptionPane.showOptionDialog(this, "Bạn chắc chắn muốn xoá?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
             if (n == 0) {
-                jTextArea1.append("Xoá thành công:\n");
-                jTextArea1.append("Tên độc giả: " + dsDocGia.getValueAt(rowIndex, 0) + "\n");
-                jTextArea1.append("Giới tính: " + dsDocGia.getValueAt(rowIndex, 1) + "\n");
-                jTextArea1.append("CMND: " + dsDocGia.getValueAt(rowIndex, 2) + "\n");
-                jTextArea1.append("Số thẻ: " + dsDocGia.getValueAt(rowIndex, 3) + "\n");
-                jTextArea1.append("Hạn dùng: " + dsDocGia.getValueAt(rowIndex, 4) + "\n");
-                jTextArea1.append("----------------------------------------------------\n");
+                jLogXoaDocGia.append("Xoá thành công:\n");
+                jLogXoaDocGia.append("Tên độc giả: " + dsDocGia.getValueAt(rowIndex, 0) + "\n");
+                jLogXoaDocGia.append("Giới tính: " + dsDocGia.getValueAt(rowIndex, 1) + "\n");
+                jLogXoaDocGia.append("CMND: " + dsDocGia.getValueAt(rowIndex, 2) + "\n");
+                jLogXoaDocGia.append("Số thẻ: " + dsDocGia.getValueAt(rowIndex, 3) + "\n");
+                jLogXoaDocGia.append("Hạn dùng: " + dsDocGia.getValueAt(rowIndex, 4) + "\n");
+                jLogXoaDocGia.append("----------------------------------------------------\n");
                 connectDatabase.deleteDataDocGia((String) dsDocGia.getValueAt(rowIndex, colIndex));
                 JOptionPane.showMessageDialog(this, "Áp dụng thành công!");
             } else {
-                jTextArea1.append("Huỷ thành công!\n");
-                jTextArea1.append("----------------------------------------------------\n");
+                jLogXoaDocGia.append("Huỷ thành công!\n");
+                jLogXoaDocGia.append("----------------------------------------------------\n");
             }
         }  else {
             JOptionPane.showMessageDialog(this, "Vui lòng chọn một mục!");
@@ -2267,13 +2267,13 @@ public class MainForm extends javax.swing.JFrame {
         temp = connectDatabase.getListMaDG();
         for (int i = 0; i < temp.length; i++) {
             if (temp[i] != null)
-                jComboBox1.addItem(temp[i]);
+                jChonMaThe.addItem(temp[i]);
         }
         jTextField1.setText(connectDatabase.getMATHUTHU(userName));
         jTextField2.setText(connectDatabase.getTenThuThu(userName));
         jTextField1.setEnabled(false);
         jTextField2.setEnabled(false);
-        jTextField3.setEnabled(false);
+        showTenDocGia.setEnabled(false);
     }//GEN-LAST:event_dkMuonActionPerformed
 
     private void traSachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_traSachActionPerformed
@@ -2281,7 +2281,7 @@ public class MainForm extends javax.swing.JFrame {
         temp = connectDatabase.getListDonMuon();
         for (int i = 0; i < temp.length; i++) {
             if (temp[i] != null)
-                jComboBox2.addItem(temp[i]);
+                selectMaDon.addItem(temp[i]);
         }
         // TODO add your handling code here:
         disableAllPanel();
@@ -2341,7 +2341,7 @@ public class MainForm extends javax.swing.JFrame {
         Object[] option = {"Có", "Không"};
         int n = JOptionPane.showOptionDialog(this, "Bạn có muốn thêm sách?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
         if (n == 0) {
-            connectDatabase.insertData(sql);
+            connectDatabase.updateData(sql);
             logThemSach.append("Thêm thành công:\n");
             logThemSach.append("Tên sách: " + TENSACH + "\n");
             logThemSach.append("Mã sách: " + MASACH + "\n");
@@ -2385,7 +2385,7 @@ public class MainForm extends javax.swing.JFrame {
         Object[] option = {"Có", "Không"};
         int n = JOptionPane.showOptionDialog(this, "Bạn có muốn thêm độc giả?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
         if (n == 0) {
-            connectDatabase.insertData(sql);
+            connectDatabase.updateData(sql);
             logThemDG.append("Thêm thành công:\n");
             logThemDG.append("Họ tên: " + HOTEN + "\n");
             logThemDG.append("Ngày sinh: " + convertMMDDYY(NGAYSINH) + "\n");
@@ -2460,24 +2460,27 @@ public class MainForm extends javax.swing.JFrame {
 
     private void themSachMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_themSachMActionPerformed
         // TODO add your handling code here:
-        //làm mới.
-        DefaultTableModel model = (DefaultTableModel) jTable5.getModel();
-        if (!jTextField4.getText().equals("") && !jTextField5.getText().equals("") && !inputMaSachMuon.getText().equals("") && !inputSoLuongMuon.getText().equals("")) {
+        //
+        DefaultTableModel model = (DefaultTableModel) jHoaDonTam.getModel();
+        if (!inputNgayMuon.getText().equals("") && !inputDuKien.getText().equals("") && !inputMaSachMuon.getText().equals("") && !inputSoLuongMuon.getText().equals("")) {
             if (connectDatabase.getSingleData("select MASACH from SACH").contains(inputMaSachMuon.getText())) {
-                model.addRow(new Object[] {
-                        inputMaSachMuon.getText(),
-                        connectDatabase.getSingleData("select TENSACH from SACH where MASACH = '" + inputMaSachMuon.getText() + "'"),
-                        connectDatabase.getSingleData("select TACGIA from SACH where MASACH = '" + inputMaSachMuon.getText() + "'"),
-                        inputSoLuongMuon.getText(),
-                        convertMMDDYY(jTextField4.getText()),
-                        convertMMDDYY(jTextField5.getText())
-                });
+                int s = Integer.parseInt(connectDatabase.getSingleData("select SOLUONG from SACH where MASACH = '" + inputSoLuongMuon.getText() + "'").replace(",", ""));
+                if (Integer.parseInt(inputSoLuongMuon.getText()) <= s) {
+                    model.addRow(new Object[] {
+                            inputMaSachMuon.getText(),
+                            connectDatabase.getSingleData("select TENSACH from SACH where MASACH = '" + inputMaSachMuon.getText() + "'"),
+                            connectDatabase.getSingleData("select TACGIA from SACH where MASACH = '" + inputMaSachMuon.getText() + "'"),
+                            inputSoLuongMuon.getText(),
+                            convertMMDDYY(inputNgayMuon.getText()),
+                            convertMMDDYY(inputDuKien.getText())
+                    });
+                } else JOptionPane.showMessageDialog(this, "Số sách trong kho không đủ!");
             } else JOptionPane.showMessageDialog(this, "Sai! Nhập lại mã sách!");
         } else JOptionPane.showMessageDialog(this, "Vui lòng nhập đủ thông tin!");
         int numOfBook = 0, giatien = 0;
         String gia = new String("0");
-        for (int i = 0; i < jTable5.getRowCount(); i++) {
-            numOfBook += Integer.parseInt((String) jTable5.getValueAt(i, 3));
+        for (int i = 0; i < jHoaDonTam.getRowCount(); i++) {
+            numOfBook += Integer.parseInt((String) jHoaDonTam.getValueAt(i, 3));
         }
         tongSachMuon.setText(String.valueOf(numOfBook));
     }//GEN-LAST:event_themSachMActionPerformed
@@ -2486,11 +2489,11 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cocActionPerformed
 
-    private void jButton9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton9MouseClicked
+    private void jThoat2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jThoat2MouseClicked
         // TODO add your handling code here:
         disableAllPanel();
         Home.setVisible(true);
-    }//GEN-LAST:event_jButton9MouseClicked
+    }//GEN-LAST:event_jThoat2MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
         // TODO add your handling code here:
@@ -2545,10 +2548,10 @@ public class MainForm extends javax.swing.JFrame {
 
     }//GEN-LAST:event_timKiemSachActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jChonMaTheActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jChonMaTheActionPerformed
         // TODO add your handling code here:
-        jTextField3.setText(connectDatabase.getTenDocGia((String) jComboBox1.getSelectedItem()));
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+        showTenDocGia.setText(connectDatabase.getTenDocGia((String) jChonMaThe.getSelectedItem()));
+    }//GEN-LAST:event_jChonMaTheActionPerformed
 
     private void timkiemActionPerformed(ActionEvent evt) {//GEN-FIRST:event_timkiemActionPerformed
         // TODO add your handling code here:
@@ -2597,83 +2600,84 @@ public class MainForm extends javax.swing.JFrame {
         int returnVal = fileDialog.showSaveDialog(null);
     }//GEN-LAST:event_buttomXuatFileActionPerformed
 
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+    private void jXuatFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jXuatFileActionPerformed
         // TODO add your handling code here:
         int returnVal = fileDialog.showSaveDialog(null);
-    }//GEN-LAST:event_jButton8ActionPerformed
+    }//GEN-LAST:event_jXuatFileActionPerformed
 
     private void xoaSachMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoaSachMActionPerformed
         // TODO add your handling code here:
         //làm mới
-        int indexRow = jTable5.getSelectedRow();
-        DefaultTableModel model = (DefaultTableModel) jTable5.getModel();
+        int indexRow = jHoaDonTam.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel) jHoaDonTam.getModel();
         model.removeRow(indexRow);
     }//GEN-LAST:event_xoaSachMActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) throws SQLException {/*
+    private void jLuuActionPerformed(java.awt.event.ActionEvent evt) throws SQLException {/*
         GEN-FIRST:event_jButton11ActionPerformed
          TODO add your handling code here:
         */
-        if (jTable5.getRowCount() == 0) {
+        if (jHoaDonTam.getRowCount() == 0) {
             JOptionPane.showMessageDialog(this, "Lỗi, phiếu mượn hiện đang rỗng!");
         } else {
             Object[] option = {"Có", "Không"};
             int n = JOptionPane.showOptionDialog(this, "Xác nhận hoá đơn?", "Xác nhận", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, option, option[0]);
             if (n == 0) {
-                for (int i = 0; i < jTable5.getRowCount(); i++) {
-                    String tmp = new String("insert into MUON (MAMUON, MATHE, NGAYMUON, DKTRA, MASACH, MATHUTHU, SOLUONG, TINHTRANG) values ");
-                    tmp += "('" + nhapMaDon.getText() + "','" + jComboBox1.getSelectedItem() + "','" + jTable5.getValueAt(i, 4) + "','" + jTable5.getValueAt(i, 5) + "','" + jTable5.getValueAt(i, 0) + "','" + jTextField1.getText() + "','" + jTable5.getValueAt(i, 3) + "','" + 0 + "')";
-                    String str = new String("insert into DKMUON (MAMUON, TIENCOC) values ");
+                String tmp = new String("insert into MUON (MAMUON, MATHE, NGAYMUON, DKTRA, MASACH, MATHUTHU, SOLUONG, TINHTRANG) values ");
+                String str = new String("insert into DKMUON (MAMUON, TIENCOC) values ");
+                for (int i = 0; i < jHoaDonTam.getRowCount(); i++) {
+                    int soluong = Integer.parseInt(connectDatabase.getSingleData("select SOLUONG from SACH where MASACH = '" + jHoaDonTam.getValueAt(i, 0) + "'").replace(",", ""));
+                    tmp += "('" + nhapMaDon.getText() + "','" + jChonMaThe.getSelectedItem() + "','" + jHoaDonTam.getValueAt(i, 4) + "','" + jHoaDonTam.getValueAt(i, 5) + "','" + jHoaDonTam.getValueAt(i, 0) + "','" + jTextField1.getText() + "','" + jHoaDonTam.getValueAt(i, 3) + "','" + 0 + "')";
                     str += "('" + nhapMaDon.getText() + "','" + coc.getText() + "')";
-                    System.out.println(tmp);
-                    connectDatabase.insertData(tmp);
-                    connectDatabase.insertData(str);
-                    System.out.println(tmp);
+                    connectDatabase.updateData("Update SACH Set SOLUONG = " + (soluong - Integer.parseInt((String) jHoaDonTam.getValueAt(i, 3))) + " where MASACH = '" + jHoaDonTam.getValueAt(i, 0) + "'");
+                    //System.out.println(jHoaDonTam.getValueAt(i, 3));
+                    connectDatabase.updateData(tmp);
+                    connectDatabase.updateData(str);
                 }
                 JOptionPane.showMessageDialog(this, "Lưu thành công!");
             }
         }
         //thêm câu lệnh insert
     }                                         
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+    private void selectMaDonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectMaDonActionPerformed
         // TODO add your handling code here:
-        String str = (String) jComboBox2.getSelectedItem();
-        jTextField8.setText(connectDatabase.getSingleData("select top 1 HOTEN from DOCGIA, MUON where MUON.MATHE = DOCGIA.MATHE and MUON.MAMUON = '" + str +"'").replace(",",""));
+        String str = (String) selectMaDon.getSelectedItem();
+        showTenDocGIa.setText(connectDatabase.getSingleData("select top 1 HOTEN from DOCGIA, MUON where MUON.MATHE = DOCGIA.MATHE and MUON.MAMUON = '" + str +"'").replace(",",""));
         String[] temp = new String[50];
         temp = connectDatabase.getListSachMuon(str);
         for (int i = 0; i < temp.length; i++) {
             if (temp[i] != null)
-                jComboBox7.addItem(temp[i]);
+                selectMaSach.addItem(temp[i]);
         }
-    }//GEN-LAST:event_jComboBox2ActionPerformed
+    }//GEN-LAST:event_selectMaDonActionPerformed
 
-    private void jComboBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox7ActionPerformed
+    private void selectMaSachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_selectMaSachActionPerformed
         // TODO add your handling code here:
         //lưu ý
-        String soluong = connectDatabase.getSingleData("select SOLUONG from MUON where MAMUON = '" + jComboBox2.getSelectedItem() + "' and MASACH = '" + jComboBox7.getSelectedItem() + "'").replace(",", "");
-        jTextConLai.setText(soluong);
+        String soluong = connectDatabase.getSingleData("select SOLUONG from MUON where MAMUON = '" + selectMaDon.getSelectedItem() + "' and MASACH = '" + selectMaSach.getSelectedItem() + "'").replace(",", "");
+        jConLai.setText(soluong);
         //System.out.println();
-    }//GEN-LAST:event_jComboBox7ActionPerformed
+    }//GEN-LAST:event_selectMaSachActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void jTraSachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTraSachActionPerformed
         // TODO add your handling code here:
-        String soluong = connectDatabase.getSingleData("select SOLUONG from MUON where MAMUON = '" + jComboBox2.getSelectedItem() + "' and MASACH = '" + jComboBox7.getSelectedItem() + "'").replace(",", "");
+        String soluong = connectDatabase.getSingleData("select SOLUONG from MUON where MAMUON = '" + selectMaDon.getSelectedItem() + "' and MASACH = '" + selectMaSach.getSelectedItem() + "'").replace(",", "");
         //int a = Integer.parseInt(soluong);
-        if (jTextSoLuongTra.equals(""))
-            jTextConLai.setText(String.valueOf(Integer.parseInt(soluong)));
+        if (inputSoLuongTra.equals(""))
+            jConLai.setText(String.valueOf(Integer.parseInt(soluong)));
          else {
-             if (Integer.parseInt(jTextSoLuongTra.getText()) <= Integer.parseInt(jTextConLai.getText())) {
-                 jTextConLai.setText(String.valueOf(Integer.parseInt(soluong) - Integer.parseInt(jTextSoLuongTra.getText())));
-                 jTextSoLuongTra.setText("");
+             if (Integer.parseInt(inputSoLuongTra.getText()) <= Integer.parseInt(jConLai.getText())) {
+                 jConLai.setText(String.valueOf(Integer.parseInt(soluong) - Integer.parseInt(inputSoLuongTra.getText())));
+                 inputSoLuongTra.setText("");
              } else {
                  JOptionPane.showMessageDialog(this, "Số sách trả sai, vui lòng nhập lại!");
              }
         }
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_jTraSachActionPerformed
 
-    private void jComboBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox5ActionPerformed
+    private void inputTinhTrang2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputTinhTrang2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox5ActionPerformed
+    }//GEN-LAST:event_inputTinhTrang2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2763,6 +2767,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTextField inputCMND;
     private javax.swing.JTextField inputCongViec;
     private javax.swing.JTextField inputDiaChi;
+    private javax.swing.JTextField inputDuKien;
     private javax.swing.JTextField inputGia;
     private javax.swing.JTextField inputHanDung;
     private javax.swing.JTextField inputHoTen;
@@ -2771,71 +2776,58 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTextField inputMaSach;
     private javax.swing.JTextField inputMaSachMuon;
     private javax.swing.JTextField inputMonLoai;
+    private javax.swing.JTextField inputNgayMuon;
     private javax.swing.JTextField inputNgaySinh;
+    private javax.swing.JTextField inputNgayTra;
     private javax.swing.JTextField inputNgonNgu;
+    private javax.swing.JTextField inputNo;
     private javax.swing.JTextField inputSDT;
     private javax.swing.JTextField inputSoLuong;
     private javax.swing.JTextField inputSoLuongMuon;
+    private javax.swing.JTextField inputSoLuongTra;
     private javax.swing.JTextField inputSoThe;
     private javax.swing.JTextField inputTacGia;
     private javax.swing.JTextField inputTenSach;
+    private javax.swing.JComboBox<String> inputTinhTrang2;
+    private javax.swing.JComboBox<String> inputTinhTrangQuaHan;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox7;
+    private javax.swing.JLabel jCMND;
+    private javax.swing.JComboBox<String> jChonMaThe;
+    private javax.swing.JTextField jConLai;
+    private javax.swing.JLabel jCongViec;
+    private javax.swing.JLabel jDanhSachDocGia;
+    private javax.swing.JLabel jDiaChi;
+    private javax.swing.JLabel jDocGia;
+    private javax.swing.JLabel jDuKienTra;
+    private javax.swing.JLabel jGioiTinh;
+    private javax.swing.JLabel jHoTen3;
+    private javax.swing.JTable jHoaDonTam;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelDanhSachSach;
+    private javax.swing.JTextArea jLogXoaDocGia;
+    private javax.swing.JButton jLuu;
+    private javax.swing.JLabel jMaDonMuon;
+    private javax.swing.JLabel jMaKho;
+    private javax.swing.JLabel jMaKho2;
+    private javax.swing.JLabel jMaNXB;
+    private javax.swing.JLabel jMaSach;
+    private javax.swing.JLabel jMaSach2;
+    private javax.swing.JLabel jMaSach3;
+    private javax.swing.JLabel jMaSach4;
+    private javax.swing.JLabel jMaSoThe;
+    private javax.swing.JLabel jMaThuThu;
+    private javax.swing.JLabel jMonLoai;
+    private javax.swing.JLabel jMonLoai2;
+    private javax.swing.JLabel jNgayMuon;
+    private javax.swing.JLabel jNgayTra;
+    private javax.swing.JLabel jNgonNgu2;
+    private javax.swing.JLabel jNhaXuatBan;
+    private javax.swing.JLabel jNo;
+    private javax.swing.JLabel jQuaHan;
+    private javax.swing.JLabel jSDT;
+    private javax.swing.JLabel jSDT2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
@@ -2854,39 +2846,51 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTable jTable5;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextConLai;
+    private javax.swing.JLabel jSoLuong;
+    private javax.swing.JLabel jSoLuong2;
+    private javax.swing.JLabel jSoLuongTra;
+    private javax.swing.JLabel jTacGia;
+    private javax.swing.JLabel jTacGia3;
+    private javax.swing.JLabel jTenDocGia;
+    private javax.swing.JLabel jTenDocGia2;
+    private javax.swing.JLabel jTenSach;
+    private javax.swing.JLabel jTenSach3;
+    private javax.swing.JLabel jTenThuThu;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextNgayTra;
-    private javax.swing.JTextField jTextSoLuongTra;
-    private javax.swing.JTextField jTextTratiencoc;
+    private javax.swing.JLabel jThanhToan;
+    private javax.swing.JLabel jThoat;
+    private javax.swing.JButton jThoat2;
+    private javax.swing.JLabel jThongKe;
+    private javax.swing.JLabel jThongKe2;
+    private javax.swing.JTable jThongKeDocGia;
+    private javax.swing.JTable jThongKeSach;
+    private javax.swing.JLabel jTienCoc;
+    private javax.swing.JLabel jTongSach;
+    private javax.swing.JButton jTraSach;
+    private javax.swing.JTable jTraTam;
+    private javax.swing.JTextField jTratiencoc;
+    private javax.swing.JButton jXuatFile;
+    private javax.swing.JButton jXuatHoaDon;
+    private javax.swing.JButton jbuttomThongKe;
     private javax.swing.JScrollPane log;
     private javax.swing.JTextArea logThemDG;
     private javax.swing.JTextArea logThemSach;
     private javax.swing.JTextArea logXoa;
     private javax.swing.JButton luu;
     private javax.swing.JButton luuTra;
-    private javax.swing.JLabel maNXB;
-    private javax.swing.JLabel masach;
     private javax.swing.JMenuBar menu;
-    private javax.swing.JLabel monLoai;
     private javax.swing.JLabel ngaySinh;
     private javax.swing.JLabel ngonNgu;
     private javax.swing.JTextField nhapMaDon;
     private javax.swing.JComboBox<String> selectGioiTinh;
+    private javax.swing.JComboBox<String> selectMaDon;
+    private javax.swing.JComboBox<String> selectMaSach;
+    private javax.swing.JComboBox<String> selectTinhTrang;
+    private javax.swing.JTextField showTenDocGIa;
+    private javax.swing.JTextField showTenDocGia;
     private javax.swing.JLabel soLuong;
     private javax.swing.JLabel soThe;
-    private javax.swing.JLabel tensach;
     private javax.swing.JMenuItem themDocGia;
     private javax.swing.JMenuItem themSach;
     private javax.swing.JButton themSachM;

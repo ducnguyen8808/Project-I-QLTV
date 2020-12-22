@@ -54,7 +54,7 @@ public class ConnectDatabase {
         return password;
     }
 
-    public void insertData(String str) throws SQLException {
+    public void updateData(String str) throws SQLException {
         Connection connection = CreatConnect();
         Statement statement = getStatement(connection);
         statement.executeUpdate(str);
