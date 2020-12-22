@@ -4,16 +4,15 @@
  * and open the template in the editor.
  */
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.awt.image.BufferedImage;
+import java.io.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -173,6 +172,7 @@ public class MainForm extends javax.swing.JFrame {
         jLuu = new javax.swing.JButton();
         jThoat = new javax.swing.JLabel();
         nhapMaDon = new javax.swing.JTextField();
+        exportInvoice = new javax.swing.JButton();
         JPdktraSach = new javax.swing.JPanel();
         jMaDonMuon = new javax.swing.JLabel();
         thoatTra = new javax.swing.JButton();
@@ -1078,6 +1078,18 @@ public class MainForm extends javax.swing.JFrame {
 
         nhapMaDon.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
+        exportInvoice.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        exportInvoice.setText("Xuất hoá đơn");
+        exportInvoice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                try {
+                    exportInvoiceActionPerformed(evt);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
         org.jdesktop.layout.GroupLayout JPdkMuonLayout = new org.jdesktop.layout.GroupLayout(JPdkMuon);
         JPdkMuon.setLayout(JPdkMuonLayout);
         JPdkMuonLayout.setHorizontalGroup(
@@ -1147,10 +1159,12 @@ public class MainForm extends javax.swing.JFrame {
                         .addContainerGap())))
             .add(org.jdesktop.layout.GroupLayout.TRAILING, JPdkMuonLayout.createSequentialGroup()
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .add(exportInvoice)
+                .add(42, 42, 42)
                 .add(jLuu, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .add(42, 42, 42)
                 .add(huyMuon, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 79, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(23, 23, 23))
+                .add(42, 42, 42))
         );
         JPdkMuonLayout.setVerticalGroup(
             JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -1204,9 +1218,11 @@ public class MainForm extends javax.swing.JFrame {
                             .add(jTienCoc)
                             .add(coc, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
                         .add(18, 18, 18)))
-                .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(huyMuon)
-                    .add(jLuu))
+                .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(JPdkMuonLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                        .add(huyMuon)
+                        .add(jLuu))
+                    .add(exportInvoice))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
@@ -2740,6 +2756,26 @@ public class MainForm extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jbuttomThongKeActionPerformed
 
+    private void exportInvoiceActionPerformed(java.awt.event.ActionEvent evt) throws IOException {//GEN-FIRST:event_exportInvoiceActionPerformed
+        // TODO add your handling code here:
+        if (jHoaDonTam.getRowCount() != 0) {
+            int returnVal = fileDialog.showSaveDialog(null);
+            if (returnVal == JFileChooser.APPROVE_OPTION) {
+                java.io.File file = fileDialog.getSelectedFile();
+                String url = fileDialog.getCurrentDirectory().toString() + "\\" + file.getName() + ".png";
+                BufferedImage screenshotImage = new BufferedImage(
+                        this.getBounds().width, this.getBounds().height,
+                        BufferedImage.TYPE_INT_RGB);
+                this.paint(screenshotImage.getGraphics());
+                ImageIO.write(screenshotImage, "png", new File(url));
+                JOptionPane.showMessageDialog(this, "Đã xuất hoá đơn!");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Hoá đơn trống, không thể xuất!");
+        }
+
+    }//GEN-LAST:event_exportInvoiceActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2818,6 +2854,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTable dsDocGia1;
     private javax.swing.JMenuItem dsSach;
     private javax.swing.JTable dsTKDocGia;
+    private javax.swing.JButton exportInvoice;
     private javax.swing.JLabel gia;
     private javax.swing.JLabel gioiTinh;
     private javax.swing.JLabel hanDung;
