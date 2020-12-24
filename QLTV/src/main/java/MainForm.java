@@ -7,18 +7,12 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Vector;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -233,22 +227,6 @@ public class MainForm extends javax.swing.JFrame {
         timkiem = new javax.swing.JButton();
         jSeparator5 = new javax.swing.JSeparator();
         huyTimKiem = new javax.swing.JButton();
-        JPtkSach = new javax.swing.JPanel();
-        jThongKe = new javax.swing.JLabel();
-        selectTinhTrang = new javax.swing.JComboBox<>();
-        buttomThongke = new javax.swing.JButton();
-        buttomXuatFile = new javax.swing.JButton();
-        jScrollPane11 = new javax.swing.JScrollPane();
-        jThongKeSach = new javax.swing.JTable();
-        jButton6 = new javax.swing.JButton();
-        JPtkDocGia = new javax.swing.JPanel();
-        jbuttomThongKe = new javax.swing.JButton();
-        jXuatFile = new javax.swing.JButton();
-        jScrollPane12 = new javax.swing.JScrollPane();
-        jThongKeDocGia = new javax.swing.JTable();
-        jThoat2 = new javax.swing.JButton();
-        jQuaHan = new javax.swing.JLabel();
-        inputTinhTrang3 = new javax.swing.JComboBox<>();
         menu = new javax.swing.JMenuBar();
         Update = new javax.swing.JMenu();
         capNhatKho = new javax.swing.JMenu();
@@ -266,10 +244,8 @@ public class MainForm extends javax.swing.JFrame {
         TimKiem = new javax.swing.JMenu();
         timSach = new javax.swing.JMenuItem();
         timDG = new javax.swing.JMenuItem();
-        thongke = new javax.swing.JMenu();
-        tkSach = new javax.swing.JMenuItem();
-        tkDocGia = new javax.swing.JMenuItem();
         DangXuat = new javax.swing.JMenu();
+        btThongKe = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(214, 217, 223));
@@ -1727,190 +1703,6 @@ public class MainForm extends javax.swing.JFrame {
 
         cardLayout.add(JPthongTin, "card6");
 
-        JPtkSach.setPreferredSize(new java.awt.Dimension(800, 488));
-
-        jThongKe.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jThongKe.setText("Thống kê:");
-
-        selectTinhTrang.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        selectTinhTrang.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sách còn trong kho", "Sách đã cho mượn" }));
-
-        buttomThongke.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        buttomThongke.setText("Thống kê");
-        buttomThongke.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                buttomThongkeMouseClicked(evt);
-            }
-        });
-
-        buttomXuatFile.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        buttomXuatFile.setText("Xuất file");
-        buttomXuatFile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                try {
-                    buttomXuatFileActionPerformed(evt);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        jThongKeSach.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Mã sách", "Tên sách", "Tác giả", "Nhà xuất bản", "Số lượng", "Kho"
-            }
-        ));
-        jScrollPane11.setViewportView(jThongKeSach);
-
-        jButton6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jButton6.setText("Thoát");
-        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton6MouseClicked(evt);
-            }
-        });
-
-        org.jdesktop.layout.GroupLayout JPtkSachLayout = new org.jdesktop.layout.GroupLayout(JPtkSach);
-        JPtkSach.setLayout(JPtkSachLayout);
-        JPtkSachLayout.setHorizontalGroup(
-            JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(JPtkSachLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(jScrollPane11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
-                    .add(JPtkSachLayout.createSequentialGroup()
-                        .add(25, 25, 25)
-                        .add(jThongKe)
-                        .add(37, 37, 37)
-                        .add(selectTinhTrang, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .add(225, 225, 225)
-                        .add(buttomXuatFile)
-                        .add(41, 41, 41)
-                        .add(buttomThongke)
-                        .add(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, JPtkSachLayout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jButton6, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(33, 33, 33))
-        );
-        JPtkSachLayout.setVerticalGroup(
-            JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(JPtkSachLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jThongKe)
-                    .add(selectTinhTrang, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                    .add(buttomThongke)
-                    .add(buttomXuatFile))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane11, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 394, Short.MAX_VALUE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jButton6)
-                .addContainerGap())
-        );
-
-        cardLayout.add(JPtkSach, "card13");
-
-        JPtkDocGia.setPreferredSize(new java.awt.Dimension(800, 488));
-
-        jbuttomThongKe.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jbuttomThongKe.setText("Thống kê");
-        jbuttomThongKe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbuttomThongKeActionPerformed(evt);
-            }
-        });
-
-        jXuatFile.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jXuatFile.setText("Xuất file");
-        jXuatFile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                try {
-                    jXuatFileActionPerformed(evt);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-
-        jThongKeDocGia.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Mã độc giả", "Họ tên", "Giới tính", "CMND", "Ngày sinh", "SĐT", "Tiền phạt"
-            }
-        ));
-        jScrollPane12.setViewportView(jThongKeDocGia);
-
-        jThoat2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jThoat2.setText("Thoát");
-        jThoat2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jThoat2MouseClicked(evt);
-            }
-        });
-
-        jQuaHan.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        jQuaHan.setText("Bị phạt:");
-        jQuaHan.setToolTipText("");
-
-        inputTinhTrang3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        inputTinhTrang3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Có bị phạt", "Không bị phạt" }));
-
-        org.jdesktop.layout.GroupLayout JPtkDocGiaLayout = new org.jdesktop.layout.GroupLayout(JPtkDocGia);
-        JPtkDocGia.setLayout(JPtkDocGiaLayout);
-        JPtkDocGiaLayout.setHorizontalGroup(
-            JPtkDocGiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(JPtkDocGiaLayout.createSequentialGroup()
-                .addContainerGap()
-                .add(JPtkDocGiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-                    .add(JPtkDocGiaLayout.createSequentialGroup()
-                        .add(jScrollPane12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .add(JPtkDocGiaLayout.createSequentialGroup()
-                        .add(21, 21, 21)
-                        .add(jQuaHan)
-                        .add(42, 42, 42)
-                        .add(inputTinhTrang3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .add(jXuatFile)
-                        .add(44, 44, 44)
-                        .add(jbuttomThongKe)
-                        .add(38, 38, 38))))
-            .add(org.jdesktop.layout.GroupLayout.TRAILING, JPtkDocGiaLayout.createSequentialGroup()
-                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .add(jThoat2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .add(28, 28, 28))
-        );
-        JPtkDocGiaLayout.setVerticalGroup(
-            JPtkDocGiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(JPtkDocGiaLayout.createSequentialGroup()
-                .add(19, 19, 19)
-                .add(JPtkDocGiaLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
-                    .add(jbuttomThongKe)
-                    .add(jXuatFile)
-                    .add(jQuaHan)
-                    .add(inputTinhTrang3, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
-                .add(jScrollPane12, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
-                .add(18, 18, 18)
-                .add(jThoat2)
-                .addContainerGap())
-        );
-
-        cardLayout.add(JPtkDocGia, "card14");
-
         Update.setText("Cập nhật");
 
         capNhatKho.setText("Cập nhật kho");
@@ -2025,26 +1817,6 @@ public class MainForm extends javax.swing.JFrame {
 
         menu.add(TimKiem);
 
-        thongke.setText("Thống kê");
-
-        tkSach.setText("Thống kê sách");
-        tkSach.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tkSachActionPerformed(evt);
-            }
-        });
-        thongke.add(tkSach);
-
-        tkDocGia.setText("Thống kê độc giả");
-        tkDocGia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tkDocGiaActionPerformed(evt);
-            }
-        });
-        thongke.add(tkDocGia);
-
-        menu.add(thongke);
-
         DangXuat.setText("Đăng xuất");
         DangXuat.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2052,6 +1824,14 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
         menu.add(DangXuat);
+
+        btThongKe.setText("Thống kê");
+        btThongKe.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btThongKeMouseClicked(evt);
+            }
+        });
+        menu.add(btThongKe);
 
         setJMenuBar(menu);
 
@@ -2080,8 +1860,6 @@ public class MainForm extends javax.swing.JFrame {
         JPdktraSach.setVisible(false);
         JPthongTin.setVisible(false);
         JPtimSach.setVisible(false);
-        JPtkDocGia.setVisible(false);
-        JPtkSach.setVisible(false);
     }
 
     private void inputTenSachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputTenSachActionPerformed
@@ -2492,6 +2270,10 @@ public class MainForm extends javax.swing.JFrame {
                             convertMMDDYY(inputNgayMuon.getText()),
                             convertMMDDYY(inputDuKien.getText())
                     });
+                    inputMaSachMuon.setText("");
+                    inputSoLuongMuon.setText("");
+                    inputNgayMuon.setText("");
+                    inputDuKien.setText("");
                 } else JOptionPane.showMessageDialog(this, "Số sách trong kho không đủ!");
             } else JOptionPane.showMessageDialog(this, "Sai! Nhập lại mã sách!");
         } else JOptionPane.showMessageDialog(this, "Vui lòng nhập đủ thông tin!");
@@ -2506,32 +2288,6 @@ public class MainForm extends javax.swing.JFrame {
     private void cocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cocActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cocActionPerformed
-
-    private void jThoat2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jThoat2MouseClicked
-        // TODO add your handling code here:
-        disableAllPanel();
-        Home.setVisible(true);
-    }//GEN-LAST:event_jThoat2MouseClicked
-
-    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        // TODO add your handling code here:
-        disableAllPanel();
-        Home.setVisible(true);
-    }//GEN-LAST:event_jButton6MouseClicked
-
-    private void tkSachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tkSachActionPerformed
-        // TODO add your handling code here:
-        disableAllPanel();
-        JPtkSach.setVisible(true);
-        jThongKeSach.setEnabled(false);
-    }//GEN-LAST:event_tkSachActionPerformed
-
-    private void tkDocGiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tkDocGiaActionPerformed
-        // TODO add your handling code here:
-        disableAllPanel();
-        JPtkDocGia.setVisible(true);
-        jThongKeDocGia.setEnabled(false);
-    }//GEN-LAST:event_tkDocGiaActionPerformed
 
     private void dsSachMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dsSachMouseClicked
         // TODO add your handling code here:
@@ -2613,30 +2369,6 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_timMaKhoActionPerformed
 
-    private void buttomXuatFileActionPerformed(java.awt.event.ActionEvent evt) throws FileNotFoundException {//GEN-FIRST:event_buttomXuatFileActionPerformed
-        // TODO add your handling code here:
-        FileExcel fileExcel = new FileExcel();
-        int returnVal = fileDialog.showSaveDialog(null);
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            java.io.File file = fileDialog.getSelectedFile();
-            String url = fileDialog.getCurrentDirectory().toString() + "\\" + file.getName() + ".xlsx";
-            fileExcel.exportExcel(jThongKeSach, url);
-            JOptionPane.showMessageDialog(this, "Xuất file thống kê thành công!");
-        }
-    }//GEN-LAST:event_buttomXuatFileActionPerformed
-
-    private void jXuatFileActionPerformed(java.awt.event.ActionEvent evt) throws FileNotFoundException {//GEN-FIRST:event_jXuatFileActionPerformed
-        // TODO add your handling code here:
-        FileExcel fileExcel = new FileExcel();
-        int returnVal = fileDialog.showSaveDialog(null);
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            java.io.File file = fileDialog.getSelectedFile();
-            String url = fileDialog.getCurrentDirectory().toString() + "\\" + file.getName() + ".xlsx";
-            fileExcel.exportExcel(jThongKeDocGia, url);
-            JOptionPane.showMessageDialog(this, "Xuất file thống kê thành công!");
-        }
-    }//GEN-LAST:event_jXuatFileActionPerformed
-
     private void xoaSachMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xoaSachMActionPerformed
         // TODO add your handling code here:
         //làm mới
@@ -2706,56 +2438,6 @@ public class MainForm extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTraSachActionPerformed
 
-    private void buttomThongkeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttomThongkeMouseClicked
-        // TODO add your handling code here:
-        int i = selectTinhTrang.getSelectedIndex();
-        if (i == 0) {
-            jThongKeSach.setModel(new javax.swing.table.DefaultTableModel(
-                    connectDatabase.getTkDsSach("select SACH.MASACH,\tTENSACH, SACH.TACGIA, NXB.TENNXB, SOLUONG, SACH.MAKHO\n" +
-                            "from SACH\n" +
-                            "join NXB on NXB.MANXB = SACH.MANXB", 0),
-                    new String [] {
-                            "Mã sách", "Tên sách", "Tác giả", "Nhà xuất bản", "Số lượng", "Kho"
-                    }
-            ));
-        } else {
-            jThongKeSach.setModel(new javax.swing.table.DefaultTableModel(
-                    connectDatabase.getTkDsSach("select DOCGIA.MATHE, HOTEN, GIOITINH, CMND, NGAYSINH, SDT\n" +
-                            "from DOCGIA\n" +
-                            "where DOCGIA.MATHE in (select MATHE from MUON group by MATHE) and DOCGIA.MATHE not in (select MATHE from TRA group by MATHE)", 1),
-                    new String [] {
-                            "Mã sách", "Tên sách", "Tác giả", "Nhà xuất bản", "Số lượng", "Kho"
-                    }
-            ));
-        }
-    }//GEN-LAST:event_buttomThongkeMouseClicked
-
-    private void jbuttomThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuttomThongKeActionPerformed
-        // TODO add your handling code here:
-        int chose = inputTinhTrang3.getSelectedIndex();
-        if (chose == 0) {
-            jThongKeDocGia.setModel(new javax.swing.table.DefaultTableModel(
-                    connectDatabase.getTkDsMuon("select DOCGIA.MATHE, HOTEN, GIOITINH, CMND, NGAYSINH, SDT, TP.TIENPHAT\n" +
-                            "from DOCGIA\n" +
-                            "join (select MATHE, sum(PHAT) as TIENPHAT from TRA group by MATHE) as TP on TP.MATHE = DOCGIA.MATHE\n" +
-                            "where DOCGIA.MATHE in (select MATHE from MUON group by MATHE)\n", 0),
-                    new String [] {
-                            "Mã độc giả", "Họ tên", "Giới tính", "CMND", "Ngày sinh", "SĐT", "Tiền phạt"
-                    }
-            ));
-        } else {
-            jThongKeDocGia.setModel(new javax.swing.table.DefaultTableModel(
-                    connectDatabase.getTkDsMuon("select DOCGIA.MATHE, HOTEN, GIOITINH, CMND, NGAYSINH, SDT\n" +
-                            "from DOCGIA\n" +
-                            "where DOCGIA.MATHE in (select MATHE from MUON group by MATHE) and DOCGIA.MATHE not in (select MATHE from TRA group by MATHE)", 1),
-                    new String [] {
-                            "Mã độc giả", "Họ tên", "Giới tính", "CMND", "Ngày sinh", "SĐT", "Tiền phạt"
-                    }
-            ));
-        }
-
-    }//GEN-LAST:event_jbuttomThongKeActionPerformed
-
     private void exportInvoiceActionPerformed(java.awt.event.ActionEvent evt) throws IOException {//GEN-FIRST:event_exportInvoiceActionPerformed
         // TODO add your handling code here:
         if (jHoaDonTam.getRowCount() != 0) {
@@ -2763,10 +2445,9 @@ public class MainForm extends javax.swing.JFrame {
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                 java.io.File file = fileDialog.getSelectedFile();
                 String url = fileDialog.getCurrentDirectory().toString() + "\\" + file.getName() + ".png";
-                BufferedImage screenshotImage = new BufferedImage(
-                        this.getBounds().width, this.getBounds().height,
+                BufferedImage screenshotImage = new BufferedImage(JPdkMuon.getSize().width, JPdkMuon.getSize().height,
                         BufferedImage.TYPE_INT_RGB);
-                this.paint(screenshotImage.getGraphics());
+                JPdkMuon.paint(screenshotImage.createGraphics());
                 ImageIO.write(screenshotImage, "png", new File(url));
                 JOptionPane.showMessageDialog(this, "Đã xuất hoá đơn!");
             }
@@ -2775,6 +2456,10 @@ public class MainForm extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_exportInvoiceActionPerformed
+
+    private void btThongKeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btThongKeMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btThongKeMouseClicked
 
     /**
      * @param args the command line arguments
@@ -2824,8 +2509,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JPanel JPthemSach;
     private javax.swing.JPanel JPthongTin;
     private javax.swing.JPanel JPtimSach;
-    private javax.swing.JPanel JPtkDocGia;
-    private javax.swing.JPanel JPtkSach;
     private javax.swing.JPanel JPxoaDG;
     private javax.swing.JPanel JPxoaSach;
     private javax.swing.JMenu MuonTra;
@@ -2834,12 +2517,11 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTable bangSach;
     private javax.swing.JTable bangSach1;
     private javax.swing.JTable bangSach2;
+    private javax.swing.JMenu btThongKe;
     private javax.swing.JButton buttomLuu;
     private javax.swing.JButton buttomTHoatXoa;
     private javax.swing.JButton buttomThoat;
-    private javax.swing.JButton buttomThongke;
     private javax.swing.JButton buttomXoaDG;
-    private javax.swing.JButton buttomXuatFile;
     private javax.swing.JMenu capNhatDocGia;
     private javax.swing.JMenu capNhatKho;
     private javax.swing.JLayeredPane cardLayout;
@@ -2886,10 +2568,8 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTextField inputSoThe;
     private javax.swing.JTextField inputTacGia;
     private javax.swing.JTextField inputTenSach;
-    private javax.swing.JComboBox<String> inputTinhTrang3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jCMND;
     private javax.swing.JComboBox<String> jChonMaThe;
     private javax.swing.JTextField jConLai;
@@ -2922,13 +2602,10 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jNgonNgu2;
     private javax.swing.JLabel jNhaXuatBan;
     private javax.swing.JLabel jNo;
-    private javax.swing.JLabel jQuaHan;
     private javax.swing.JLabel jSDT;
     private javax.swing.JLabel jSDT2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
-    private javax.swing.JScrollPane jScrollPane11;
-    private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -2957,17 +2634,11 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel jThanhToan;
     private javax.swing.JLabel jThoat;
-    private javax.swing.JButton jThoat2;
-    private javax.swing.JLabel jThongKe;
-    private javax.swing.JTable jThongKeDocGia;
-    private javax.swing.JTable jThongKeSach;
     private javax.swing.JLabel jTienCoc;
     private javax.swing.JLabel jTongSach;
     private javax.swing.JButton jTraSach;
     private javax.swing.JTable jTraTam;
     private javax.swing.JTextField jTratiencoc;
-    private javax.swing.JButton jXuatFile;
-    private javax.swing.JButton jbuttomThongKe;
     private javax.swing.JScrollPane log;
     private javax.swing.JTextArea logThemDG;
     private javax.swing.JTextArea logThemSach;
@@ -2981,7 +2652,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> selectGioiTinh;
     private javax.swing.JComboBox<String> selectMaDon;
     private javax.swing.JComboBox<String> selectMaSach;
-    private javax.swing.JComboBox<String> selectTinhTrang;
     private javax.swing.JTextField showTenDocGIa;
     private javax.swing.JTextField showTenDocGia;
     private javax.swing.JLabel soLuong;
@@ -2993,7 +2663,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JButton thoatDanhSachDG;
     private javax.swing.JButton thoatDanhSachSach;
     private javax.swing.JButton thoatTra;
-    private javax.swing.JMenu thongke;
     private javax.swing.JTextField timCMND;
     private javax.swing.JTextField timCongViec;
     private javax.swing.JMenuItem timDG;
@@ -3011,8 +2680,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTextField timTacGia;
     private javax.swing.JTextField timTenSach;
     private javax.swing.JButton timkiem;
-    private javax.swing.JMenuItem tkDocGia;
-    private javax.swing.JMenuItem tkSach;
     private javax.swing.JTextField tongSachMuon;
     private javax.swing.JMenuItem traSach;
     private javax.swing.JMenuItem xoaDocGia;

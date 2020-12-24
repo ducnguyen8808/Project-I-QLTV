@@ -405,6 +405,7 @@ public class ConnectDatabase {
                 tkDsSach[index][4] = resultSet.getString(5);
                 if (chose == 0)
                     tkDsSach[index][5] = resultSet.getString(6);
+                else tkDsSach[index][5] = "Không thuộc kho nào";
                 index++;
             }
             connection.close();
@@ -433,6 +434,7 @@ public class ConnectDatabase {
                 tkDsMuon[index][5] = resultSet.getString(6);
                 if (chose == 0)
                     tkDsMuon[index][6] = resultSet.getString(7);
+                else tkDsMuon[index][6] = "0";
                 index++;
             }
             connection.close();
@@ -440,5 +442,27 @@ public class ConnectDatabase {
             e.printStackTrace();
         }
         return tkDsMuon;
+    }
+    private String[][] dataChart = new String[50][2];
+    public String[][] getDataChart(String str) {
+        for (int i = 0; i < dataChart.length; i++) {
+            for (int k = 0; k < 2; k++)
+                dataChart[i][k] = null;
+        }
+        try {
+            Connection connection = CreatConnect();
+            Statement statement = getStatement(connection);
+            ResultSet resultSet = statement.executeQuery(str);
+            int index =0;
+            while (resultSet.next()) {
+                dataChart[index][0] = resultSet.getString(1);
+                dataChart[index][1] = resultSet.getString(2);
+                index++;
+            }
+            connection.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return dataChart;
     }
 }
