@@ -4,9 +4,19 @@
  * and open the template in the editor.
  */
 
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PiePlot3D;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.general.DefaultPieDataset;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -227,6 +237,13 @@ public class MainForm extends javax.swing.JFrame {
         timkiem = new javax.swing.JButton();
         jSeparator5 = new javax.swing.JSeparator();
         huyTimKiem = new javax.swing.JButton();
+        JPtkSach = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        loaiTK = new javax.swing.JComboBox<>();
+        btTron = new javax.swing.JButton();
+        btCot = new javax.swing.JButton();
+        btThoat = new javax.swing.JButton();
+        showChart = new javax.swing.JPanel();
         menu = new javax.swing.JMenuBar();
         Update = new javax.swing.JMenu();
         capNhatKho = new javax.swing.JMenu();
@@ -244,8 +261,9 @@ public class MainForm extends javax.swing.JFrame {
         TimKiem = new javax.swing.JMenu();
         timSach = new javax.swing.JMenuItem();
         timDG = new javax.swing.JMenuItem();
-        DangXuat = new javax.swing.JMenu();
         btThongKe = new javax.swing.JMenu();
+        tkSach = new javax.swing.JMenuItem();
+        DangXuat = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(214, 217, 223));
@@ -480,7 +498,7 @@ public class MainForm extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jSeparator1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(log, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
+                .add(log, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -744,7 +762,7 @@ public class MainForm extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jSeparator2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                .add(jScrollPane3, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 324, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1199,7 +1217,7 @@ public class MainForm extends javax.swing.JFrame {
                         .add(huyMuon)
                         .add(jLuu))
                     .add(exportInvoice))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         cardLayout.add(JPdkMuon, "card6");
@@ -1388,7 +1406,7 @@ public class MainForm extends javax.swing.JFrame {
                         .add(18, 18, 18)
                         .add(jTraSach)
                         .add(35, 35, 35)))
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 42, Short.MAX_VALUE)
                 .add(JPdktraSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(thoatTra)
                     .add(luuTra))
@@ -1549,7 +1567,7 @@ public class MainForm extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jSeparator4, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 335, Short.MAX_VALUE)
+                .add(jScrollPane9, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1697,11 +1715,83 @@ public class MainForm extends javax.swing.JFrame {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jSeparator5, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 10, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
+                .add(jScrollPane10, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         cardLayout.add(JPthongTin, "card6");
+
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel2.setText("Loại thống kê:");
+
+        loaiTK.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        loaiTK.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tác giả", "Môn loại", "Nhà xuất bản", "Ngôn ngữ", "Kho" }));
+
+        btTron.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        btTron.setText("Biểu đồ tròn");
+        btTron.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btTronActionPerformed(evt);
+            }
+        });
+
+        btCot.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        btCot.setText("Biểu đồ cột");
+        btCot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCotActionPerformed(evt);
+            }
+        });
+
+        btThoat.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        btThoat.setText("Thoát");
+        btThoat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btThoatActionPerformed(evt);
+            }
+        });
+
+        showChart.setLayout(new java.awt.BorderLayout());
+
+        org.jdesktop.layout.GroupLayout JPtkSachLayout = new org.jdesktop.layout.GroupLayout(JPtkSach);
+        JPtkSach.setLayout(JPtkSachLayout);
+        JPtkSachLayout.setHorizontalGroup(
+            JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(JPtkSachLayout.createSequentialGroup()
+                .addContainerGap()
+                .add(JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+                    .add(JPtkSachLayout.createSequentialGroup()
+                        .add(showChart, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .add(JPtkSachLayout.createSequentialGroup()
+                        .add(jLabel2)
+                        .add(27, 27, 27)
+                        .add(loaiTK, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 158, Short.MAX_VALUE)
+                        .add(btTron)
+                        .add(51, 51, 51)
+                        .add(btCot)
+                        .add(39, 39, 39)
+                        .add(btThoat, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 73, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                        .add(22, 22, 22))))
+        );
+        showChart.setBackground(Color.white);
+        JPtkSachLayout.setVerticalGroup(
+            JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(JPtkSachLayout.createSequentialGroup()
+                .add(19, 19, 19)
+                .add(JPtkSachLayout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
+                    .add(jLabel2)
+                    .add(loaiTK, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                    .add(btTron)
+                    .add(btCot)
+                    .add(btThoat))
+                .add(18, 18, 18)
+                .add(showChart, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        cardLayout.add(JPtkSach, "card13");
 
         Update.setText("Cập nhật");
 
@@ -1817,6 +1907,28 @@ public class MainForm extends javax.swing.JFrame {
 
         menu.add(TimKiem);
 
+        btThongKe.setText("Thống kê");
+        btThongKe.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btThongKeMouseClicked(evt);
+            }
+        });
+        btThongKe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btThongKeActionPerformed(evt);
+            }
+        });
+
+        tkSach.setText("Thống kê sách");
+        tkSach.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tkSachActionPerformed(evt);
+            }
+        });
+        btThongKe.add(tkSach);
+
+        menu.add(btThongKe);
+
         DangXuat.setText("Đăng xuất");
         DangXuat.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1824,14 +1936,6 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
         menu.add(DangXuat);
-
-        btThongKe.setText("Thống kê");
-        btThongKe.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btThongKeMouseClicked(evt);
-            }
-        });
-        menu.add(btThongKe);
 
         setJMenuBar(menu);
 
@@ -1843,7 +1947,7 @@ public class MainForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(cardLayout, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 510, Short.MAX_VALUE)
+            .add(cardLayout, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 512, Short.MAX_VALUE)
         );
 
         pack();
@@ -1860,6 +1964,7 @@ public class MainForm extends javax.swing.JFrame {
         JPdktraSach.setVisible(false);
         JPthongTin.setVisible(false);
         JPtimSach.setVisible(false);
+        JPtkSach.setVisible(false);
     }
 
     private void inputTenSachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputTenSachActionPerformed
@@ -2461,6 +2566,166 @@ public class MainForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btThongKeMouseClicked
 
+    private void btThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btThongKeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btThongKeActionPerformed
+
+    private void tkSachActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tkSachActionPerformed
+        // TODO add your handling code here:
+        disableAllPanel();
+        JPtkSach.setVisible(true);
+    }//GEN-LAST:event_tkSachActionPerformed
+
+    private void btCotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCotActionPerformed
+        // TODO add your handling code here
+        //cột
+        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+        String name = "";
+
+        if (loaiTK.getSelectedIndex() == 0) {
+            String[][] dataChart = connectDatabase.getDataChart("select TACGIA, sum(SOLUONG) from SACH group by TACGIA");
+            int index = 0;
+            name += "Tác giả";
+            while (dataChart[index][0] != null) {
+                int value = Integer.parseInt(dataChart[index][1]);
+                String key = dataChart[index][0];
+                dataset.addValue(value, "Số lượng sách", key);
+                index++;
+            }
+        } else if (loaiTK.getSelectedIndex() == 1) {
+            String[][] dataChart = connectDatabase.getDataChart("select MONLOAI, sum(SOLUONG) from SACH group by MONLOAI");
+            int index = 0;
+            name += "Môn loại";
+            while (dataChart[index][0] != null) {
+                int value = Integer.parseInt(dataChart[index][1]);
+                String key = dataChart[index][0];
+                dataset.addValue(value, "Số lượng sách", key);
+                index++;
+            }
+        } else if (loaiTK.getSelectedIndex() == 2) {
+            String[][] dataChart = connectDatabase.getDataChart("select MANXB, sum(SOLUONG) from SACH group by MANXB");
+            int index = 0;
+            name += "Nhà xuất bản";
+            while (dataChart[index][0] != null) {
+                int value = Integer.parseInt(dataChart[index][1]);
+                String key = dataChart[index][0];
+                dataset.addValue(value, "Số lượng sách", key);
+                index++;
+            }
+        } else if (loaiTK.getSelectedIndex() == 3) {
+            String[][] dataChart = connectDatabase.getDataChart("select NGONNGU, sum(SOLUONG) from SACH group by NGONNGU");
+            int index = 0;
+            name += "Ngôn ngữ";
+            while (dataChart[index][0] != null) {
+                int value = Integer.parseInt(dataChart[index][1]);
+                String key = dataChart[index][0];
+                dataset.addValue(value, "Số lượng sách", key);
+                index++;
+            }
+        } else if (loaiTK.getSelectedIndex() == 4) {
+            String[][] dataChart = connectDatabase.getDataChart("select MAKHO, sum(SOLUONG) from SACH group by MAKHO");
+            int index = 0;
+            name += "Kho";
+            while (dataChart[index][0] != null) {
+                int value = Integer.parseInt(dataChart[index][1]);
+                String key = dataChart[index][0];
+                dataset.addValue(value, "Số lượng sách", key);
+                index++;
+            }
+        }
+        JFreeChart barChart = ChartFactory.createBarChart(
+                "Thống kê sách",
+                name, "Số lượng sách",
+                dataset,
+                PlotOrientation.VERTICAL,
+                false, false, false );
+        System.out.println(loaiTK.getSelectedIndex());
+        CategoryPlot plot = (CategoryPlot) barChart.getPlot();
+        plot.getRenderer().setSeriesPaint(0, new Color(0, 255, 0));
+
+        ChartPanel chartPanel = new ChartPanel(barChart);
+
+        showChart.removeAll();
+        showChart.add(chartPanel, BorderLayout.CENTER);
+        showChart.validate();
+    }//GEN-LAST:event_btCotActionPerformed
+
+    private void btTronActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btTronActionPerformed
+        // TODO add your handling code here:
+        //tròn
+        DefaultPieDataset dataset = new DefaultPieDataset();
+
+        if (loaiTK.getSelectedIndex() == 0) {
+            String[][] dataChart = connectDatabase.getDataChart("select TACGIA, sum(SOLUONG) from SACH group by TACGIA");
+            int index = 0;
+            while (dataChart[index][0] != null) {
+                int value = Integer.parseInt(dataChart[index][1]);
+                String key = dataChart[index][0];
+                dataset.setValue(key, (double) value);
+                index++;
+            }
+        } else if (loaiTK.getSelectedIndex() == 1) {
+            String[][] dataChart = connectDatabase.getDataChart("select MONLOAI, sum(SOLUONG) from SACH group by MONLOAI");
+            int index = 0;
+            while (dataChart[index][0] != null) {
+                int value = Integer.parseInt(dataChart[index][1]);
+                String key = dataChart[index][0];
+                dataset.setValue(key, (double) value);
+                index++;
+            }
+        } else if (loaiTK.getSelectedIndex() == 2) {
+            String[][] dataChart = connectDatabase.getDataChart("select MANXB, sum(SOLUONG) from SACH group by MANXB");
+            int index = 0;
+            while (dataChart[index][0] != null) {
+                int value = Integer.parseInt(dataChart[index][1]);
+                String key = dataChart[index][0];
+                dataset.setValue(key, (double) value);
+                index++;
+            }
+        } else if (loaiTK.getSelectedIndex() == 3) {
+            String[][] dataChart = connectDatabase.getDataChart("select NGONNGU, sum(SOLUONG) from SACH group by NGONNGU");
+            int index = 0;
+            while (dataChart[index][0] != null) {
+                int value = Integer.parseInt(dataChart[index][1]);
+                String key = dataChart[index][0];
+                dataset.setValue(key, (double) value);
+                index++;
+            }
+        } else if (loaiTK.getSelectedIndex() == 4) {
+            String[][] dataChart = connectDatabase.getDataChart("select MAKHO, sum(SOLUONG) from SACH group by MAKHO");
+            int index = 0;
+            while (dataChart[index][0] != null) {
+                int value = Integer.parseInt(dataChart[index][1]);
+                String key = dataChart[index][0];
+                dataset.setValue(key, (double) value);
+                index++;
+            }
+        }
+
+        JFreeChart chart = ChartFactory.createPieChart3D(
+                "Thống kê sách", // chart title
+                dataset, // data
+                true, // include legend
+                true,
+                false);
+        // set chart properties
+        final PiePlot3D plot = (PiePlot3D) chart.getPlot();
+        plot.setStartAngle(0);
+        plot.setForegroundAlpha(0.60f);
+        plot.setInteriorGap(0.02);
+        // create chart panel the add it to swing panel in  jframe
+        ChartPanel chartPanel = new ChartPanel(chart);
+        showChart.removeAll();        // clear panel before add new chart
+        showChart.add(chartPanel, BorderLayout.CENTER);
+        showChart.validate();
+    }//GEN-LAST:event_btTronActionPerformed
+
+    private void btThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btThoatActionPerformed
+        // TODO add your handling code here:
+        disableAllPanel();
+        Home.setVisible(true);
+    }//GEN-LAST:event_btThoatActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2509,6 +2774,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JPanel JPthemSach;
     private javax.swing.JPanel JPthongTin;
     private javax.swing.JPanel JPtimSach;
+    private javax.swing.JPanel JPtkSach;
     private javax.swing.JPanel JPxoaDG;
     private javax.swing.JPanel JPxoaSach;
     private javax.swing.JMenu MuonTra;
@@ -2517,7 +2783,10 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTable bangSach;
     private javax.swing.JTable bangSach1;
     private javax.swing.JTable bangSach2;
+    private javax.swing.JButton btCot;
+    private javax.swing.JButton btThoat;
     private javax.swing.JMenu btThongKe;
+    private javax.swing.JButton btTron;
     private javax.swing.JButton buttomLuu;
     private javax.swing.JButton buttomTHoatXoa;
     private javax.swing.JButton buttomThoat;
@@ -2582,6 +2851,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jHoTen3;
     private javax.swing.JTable jHoaDonTam;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelDanhSachSach;
     private javax.swing.JTextArea jLogXoaDocGia;
     private javax.swing.JButton jLuu;
@@ -2639,6 +2909,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JButton jTraSach;
     private javax.swing.JTable jTraTam;
     private javax.swing.JTextField jTratiencoc;
+    private javax.swing.JComboBox<String> loaiTK;
     private javax.swing.JScrollPane log;
     private javax.swing.JTextArea logThemDG;
     private javax.swing.JTextArea logThemSach;
@@ -2652,6 +2923,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> selectGioiTinh;
     private javax.swing.JComboBox<String> selectMaDon;
     private javax.swing.JComboBox<String> selectMaSach;
+    private javax.swing.JPanel showChart;
     private javax.swing.JTextField showTenDocGIa;
     private javax.swing.JTextField showTenDocGia;
     private javax.swing.JLabel soLuong;
@@ -2680,6 +2952,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTextField timTacGia;
     private javax.swing.JTextField timTenSach;
     private javax.swing.JButton timkiem;
+    private javax.swing.JMenuItem tkSach;
     private javax.swing.JTextField tongSachMuon;
     private javax.swing.JMenuItem traSach;
     private javax.swing.JMenuItem xoaDocGia;

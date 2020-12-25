@@ -128,20 +128,31 @@
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="DangXuat">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng xu&#x1ea5;t"/>
-          </Properties>
-          <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="DangXuatMouseClicked"/>
-          </Events>
-        </Menu>
         <Menu class="javax.swing.JMenu" name="btThongKe">
           <Properties>
             <Property name="text" type="java.lang.String" value="Th&#x1ed1;ng k&#xea;"/>
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btThongKeMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btThongKeActionPerformed"/>
+          </Events>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="tkSach">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Th&#x1ed1;ng k&#xea; s&#xe1;ch"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tkSachActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="DangXuat">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng xu&#x1ea5;t"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="DangXuatMouseClicked"/>
           </Events>
         </Menu>
       </SubComponents>
@@ -181,7 +192,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="cardLayout" alignment="0" pref="510" max="32767" attributes="0"/>
+          <Component id="cardLayout" alignment="0" pref="512" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -353,7 +364,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="log" pref="311" max="32767" attributes="0"/>
+                      <Component id="log" pref="313" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -892,7 +903,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane3" pref="300" max="32767" attributes="0"/>
+                      <Component id="jScrollPane3" pref="324" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1720,7 +1731,7 @@
                           </Group>
                           <Component id="exportInvoice" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="47" max="32767" attributes="0"/>
+                      <EmptySpace pref="49" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -2152,7 +2163,7 @@
                               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="18" max="32767" attributes="0"/>
+                      <EmptySpace pref="42" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="thoatTra" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="luuTra" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -2492,7 +2503,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator4" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane9" pref="335" max="32767" attributes="0"/>
+                      <Component id="jScrollPane9" pref="359" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -2823,7 +2834,7 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jSeparator5" min="-2" pref="10" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane10" pref="333" max="32767" attributes="0"/>
+                      <Component id="jScrollPane10" pref="357" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -3020,6 +3031,129 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="huyTimKiemActionPerformed"/>
               </Events>
             </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="JPtkSach">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+              <CardConstraints cardName="card13"/>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="showChart" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="loaiTK" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="158" max="32767" attributes="0"/>
+                              <Component id="btTron" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                              <Component id="btCot" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                              <Component id="btThoat" min="-2" pref="73" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="loaiTK" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btTron" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btCot" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btThoat" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="showChart" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Lo&#x1ea1;i th&#x1ed1;ng k&#xea;:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="loaiTK">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                  <StringArray count="5">
+                    <StringItem index="0" value="T&#xe1;c gi&#x1ea3;"/>
+                    <StringItem index="1" value="M&#xf4;n lo&#x1ea1;i"/>
+                    <StringItem index="2" value="Nh&#xe0; xu&#x1ea5;t b&#x1ea3;n"/>
+                    <StringItem index="3" value="Ng&#xf4;n ng&#x1eef;"/>
+                    <StringItem index="4" value="Kho"/>
+                  </StringArray>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="btTron">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Bi&#x1ec3;u &#x111;&#x1ed3; tr&#xf2;n"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btTronActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btCot">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Bi&#x1ec3;u &#x111;&#x1ed3; c&#x1ed9;t"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btCotActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btThoat">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="14" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Tho&#xe1;t"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btThoatActionPerformed"/>
+              </Events>
+            </Component>
+            <Container class="javax.swing.JPanel" name="showChart">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="33" red="0" type="rgb"/>
+                </Property>
+              </Properties>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+            </Container>
           </SubComponents>
         </Container>
       </SubComponents>
